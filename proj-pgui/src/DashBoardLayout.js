@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { ctxAuth } from "./auth";
-import "./styles.css";
+import backIcon from "./icons/backIcon.png"
 
 import { LangContext, LangContextProvider } from "./language/lang";
 import { LangSwitcher } from "./language/langSwitcher";
@@ -18,6 +18,9 @@ export function DashBoardLayout() {
         <emph><TextAny text="theme" /> {<ColorThemeButton />}</emph>
       </div>
       <br />
+      <div style={{marginLeft: "5%"}}>
+      <img src={backIcon} alt="back" height="20" />
+      
       <emph
         onClick={(e) => {
           if (location.pathname === "/dashboard") {
@@ -26,11 +29,12 @@ export function DashBoardLayout() {
             navigate("/dashboard");
           }
         }}
-        style={{ marginLeft: "5%" }}
+        style={{ marginLeft: "1%"}}
       >
-        Powrót do:{" "}
-        {location.pathname === "/dashboard" ? "Strona Główna" : "DashBoard"}
+        <TextAny text="return" />
+        {location.pathname === "/dashboard" ? <TextAny text="homePage" /> : <TextAny text="dashboard" />}
       </emph>
+      </div>
 
       <h1 style={{ marginLeft: "5%", marginRight: "5%" }}>
         <TextAny text="welcome" />{authState.zalogowany ? authState.zalogowany : "nikt?"}!
@@ -45,7 +49,7 @@ export function DashBoardLayout() {
 function ColorThemeButton() {
   return (
     <>
-      <button className="languageButon roundedButton">JASNY</button>
+      <button className="languageButon roundedButton"><TextAny text="light" /></button>
     </>
   );
 }

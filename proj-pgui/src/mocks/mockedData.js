@@ -1,84 +1,84 @@
 // widget OpinieKupujacych
-export const opinieklientow = [
+export const customerReviews = [
     {
       id: 1,
-      nazwaKlienta: "Jacek",
-      tekst:
+      customerName: "Jacek",
+      text:
         "Bardzo dobry głośnik. Korzystam już ponad 2 lata i nie ma żadnych problemów. Jakość top, żywotność baterii top. Bardzo polecam!",
-      typ: "pozytywna",
-      data: "05.07.2022"
+      type: "positive",
+      date: "05.07.2022"
     },
     {
       id: 2,
-      nazwaKlienta: "Krzyszto44",
-      tekst:
+      customerName: "Krzyszto44",
+      text:
         "Przyjemny monitorek. Całkiem duży, a jednocześnie lekki. Ma kilka portów, co nie jest tak często spotykane w przedmiotach z tej półki cenowej. Ogólnie rewelacyjny stosunek jakość do ceny!",
-      typ: "pozytywna",
-      data: "22.11.2022"
+      type: "positive",
+      date: "22.11.2022"
     },
     {
       id: 3,
-      nazwaKlienta: "KubiX",
-      tekst:
+      customerName: "KubiX",
+      text:
         "Słabiutkie słuchawki. Cały czas się rozładowują. Średni czas życia baterii od pełnego naładowania to tylko 2 godziny! Nie dajcie się na ten szajs naciągnąć!!!",
-      typ: "negatywna",
-      data: "5.12.2022"
+      type: "negative",
+      date: "5.12.2022"
     },
     {
       id: 4,
-      nazwaKlienta: "Caro33",
-      tekst:
+      customerName: "Caro33",
+      text:
         "Dobra kamera. Jak na cenę 200 PLN to chyba najlepszy dostępny na stronie.",
-      typ: "pozytywna",
-      data: "10.03.2022"
+      type: "positive",
+      date: "10.03.2022"
     },
     {
       id: 5,
-      nazwaKlienta: "Arturito",
-      tekst:
+      customerName: "Arturito",
+      text:
         "Myszka beznadziejna. W ogóle ani razu nie zadziałała po otwarciu. Słaby kontakt i problem ze zwrotem.",
-      typ: "negatywna",
-      data: "13.05.2022"
+      type: "negative",
+      date: "13.05.2022"
     },
     {
       id: 6,
-      nazwaKlienta: "DonPedro",
-      tekst:
+      customerName: "DonPedro",
+      text:
         "Te słuchawki warte są każdych pieniędzy! Profesjonalne wykonanie, szeroka scena dźwięku a poziom wyciszenia przez ANC jest dla mnie odkryciem na miarę dekady. Ja, który cierpię na nadwrażliwość słuchową dzięki temu urządzeniu wreszcie mogę żyć spokojnie! Dzięki Sony!",
-      typ: "pozytywna",
-      data: "22.11.2022"
+      type: "positive",
+      date: "22.11.2022"
     },
     {
       id: 7,
-      nazwaKlienta: "Locx3k",
-      tekst:
+      customerName: "Locx3k",
+      text:
         "Dźwięk jest ok, noise cancellation też jest na najwyższym poziomie. Jednak słuchawki są strasznie nie komfortowe. Uszy grzeją się już po 2 minutach noszenia i to zimą... Nie wyobrażam jak ich można używać latem...",
-      typ: "negatywna",
-      data: "4.01.2022"
+      type: "negative",
+      date: "4.01.2022"
     },
     {
       id: 8,
-      nazwaKlienta: "Kubaandrzej1992",
-      tekst:
+      customerName: "Kubaandrzej1992",
+      text:
         "Kupiłem tę myszkę, ale produkt wg mnie nie nadaje się do użytkowania, po miesiącu myszka łapie zwiechy i co 10min zawiesza się na 3-5s i nie można nic kursora ruszać. Jestem strasznie zawiedziony, tą myszką nie da się grać w gry, ba, nawet Internet strach przeglądać, chętnie bym ją oddał lub zareklamował, ale mi się gdzieś paragon zgubił, strata pieniędzy!",
-      typ: "negatywna",
-      data: "19.04.2022"
+      type: "negative",
+      date: "19.04.2022"
     },
     {
       id: 9,
-      nazwaKlienta: "kamilos",
-      tekst:
+      customerName: "kamilos",
+      text:
         "Produkt ładny, niestety na tym się kończy, przyciski są wręcz dotykowe, nie można normalnie grać/przeglądać Internetu, bo co chwile leci przypadkowe kliknięcie.",
-      typ: "negatywna",
-      data: "9.02.2022"
+      type: "negative",
+      date: "9.02.2022"
     },
     {
       id: 10,
-      nazwaKlienta: "Radosław1990",
-      tekst:
+      customerName: "Radosław1990",
+      text:
         "Polecam! Jeżeli ktoś się zastanawia nad wyborem Xbox czy PS5 (tak jak ja) to po zakupie moje wątpliwości zostały rozwiane. Lepszy pakiet gier w zestawie PS PLUS. Działanie i wygląd pada jest mega. Dysk SSD - tu nie trzeba nic dodawać. Konsola pracuję cichutko. Jeżeli szukasz zestawu z FIFĄ to dobrze trafiłeś, jedyne czego brakuję to drugiego pada.",
-      typ: "pozytywna",
-      data: "26.05.2022"
+      type: "positive",
+      date: "26.05.2022"
     }
   ];
   

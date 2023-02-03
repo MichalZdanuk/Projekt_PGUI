@@ -21,7 +21,7 @@ function QualityOfSalesWidget() {
 
   return (
     <div className="widgetCard widgetCardBackground">
-      <p className="widgetTitle"><TextAny text="orders" /></p>
+      <p className="widgetTitle largeFontSize"><TextAny text="orders" /></p>
       <hr className="widgetTitle" />
       <div style={{ marginLeft: "5%", marginTop: "2%" }}>
         <QualityAspectsTable listOfGrades={qualityOfSales.listOfGrades} />

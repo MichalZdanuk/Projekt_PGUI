@@ -1,3 +1,8 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
 body {
   background-color: #411d62;
   font-family: "Comfortaa", cursive;
@@ -56,6 +61,17 @@ body {
   border-radius: 10px;
 }
 
+.widgetCardTitle {
+  font-weight: bold;
+  margin-bottom: -5px;
+  margin-top: 10px;
+
+}
+
+.widgetCardHR{
+  margin-bottom: 20px;
+}
+
 .widgetCard {
   margin-left: 10%;
   margin-right: 10%;
@@ -70,19 +86,21 @@ body {
   background: #744c95;
 }
 
+.buttonCentered {
+  text-align: center;
+}
+
 .buttonClicked {
+  background-color: #411d62;
+  color: #fee9ff;
+  font-weight: bold;
+  border-color: #b2a8b8;
+}
+.buttonNotClicked {
   background-color: #e3b4ff;
   color: #000000;
   font-weight: bold;
   border-color: #b2a8b8;
-  font-size: 30px;
-}
-.buttonNotClicked {
-  background-color: #744c95;
-  color: #fee9ff;
-  font-weight: bold;
-  border-color: #b2a8b8;
-  font-size: 30px;
 }
 
 hr.widgetTitle {
@@ -91,9 +109,8 @@ hr.widgetTitle {
 }
 
 .widgetTitle {
-  font-size: 25px;
   font-weight: bold;
-  margin-left: 40%;
+  text-align: center;
 }
 
 .loginPanel {
@@ -129,4 +146,54 @@ div.worstAspects {
   border-radius: 15px;
   border: solid 3px;
   width: 200px;
+}
+
+.centeredElement{
+  text-align: center;
+}
+
+.largeFontSize{
+  font-size: 25px;
+}
+
+.plainFontSize{
+  font-size: 20px;
+}
+
+.positive {
+  color: green;
+  font-weight: bold;
+}
+.negative {
+  color: red;
+  font-weight: bold;
+}
+
+.opinionBox{
+  border-radius: 15px;
+  border: solid 3px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  background-color: #e3b4ff;
+}
+
+.opinionUsername{
+  margin-left: 3%;
+  font-weight: bold;
+  color: #411d62;
+}
+
+.opinionDate{
+  float: right;
+  margin-right: 5%;
+  font-weight: bold;
+  color: #411d62;
+}
+
+.opinionText{
+  margin-left: 3%;
+  margin-right: 3%;
+  color: grey;
 }

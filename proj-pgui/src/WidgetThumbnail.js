@@ -1,5 +1,8 @@
 import startsRating from "./icons/startsRating.png";
-import qualityIcon from "./icons/qualityIcon.png"
+import qualityIcon from "./icons/qualityIcon.png";
+import chartIcon from "./icons/chartIcon.png";
+import arrowDark from "./icons/arrowDark.png"
+
 import { useNavigate } from "react-router-dom";
 import { TextAny } from "./language/langTexts";
 
@@ -16,14 +19,17 @@ function WidgetThumbnail(props) {
       >
         {props.name === "orders" ? (
           <div className="widget_thumbnail_content">
-            <h2>{<TextAny text={props.name} />}</h2>
-            <hr />
+            <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
+            <hr className="widgetCardHR" />
             <p>
-              Not Paid: 12
+              <TextAny text="notPaid" />
+              12
               <br />
-              Not Sent: 15
+              <TextAny text="notSent" />
+              15
               <br />
-              Refunds: 10
+              <TextAny text="refunds" />
+              10
               <br />
             </p>
           </div>
@@ -33,21 +39,23 @@ function WidgetThumbnail(props) {
 
         {props.name === "qualityOfSales" ? (
           <div className="widget_thumbnail_content">
-            <div className="rightIcon"><img src={qualityIcon} alt="quality" height="50"/></div>
-            <h2>{<TextAny text={props.name} />}</h2>
-            <hr />
-            <div style={{ marginLeft: "35%" }}>
+            {/* <div className="rightIcon">
+              <img src={qualityIcon} alt="quality" height="50" />
+            </div> */}
+            <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
+            <hr className="widgetCardHR" />
+            <div className="centeredElement">
               <img src={startsRating} alt="stars" height="50" />
             </div>
 
-            <div style={{textAlign: "center"}}>
-            <h4>{<TextAny text="receivedCategory" />}DECENT</h4>
+            <div className="centeredElement">
+              <h4>{<TextAny text="receivedCategory" />}DECENT</h4>
               <h4>{<TextAny text="qualityRate" />}37/50</h4>
             </div>
 
-            <div style={{ marginLeft: "25%" }}>
-              <button className="roundedButton buttonClicked">
-                <TextAny text="chechDetails" />
+            <div className="centeredElement">
+              <button className="roundedButton buttonClicked largeFontSize">
+                <TextAny text="checkDetails" />
               </button>
             </div>
           </div>
@@ -57,8 +65,8 @@ function WidgetThumbnail(props) {
 
         {props.name === "buyersReviews" ? (
           <div className="widget_thumbnail_content">
-            <h2>{<TextAny text={props.name} />}</h2>
-            <hr />
+            <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
+            <hr className="widgetCardHR" />
             <p>opinie</p>
           </div>
         ) : (
@@ -67,8 +75,8 @@ function WidgetThumbnail(props) {
 
         {props.name === "rankingOfOffers" ? (
           <div className="widget_thumbnail_content">
-            <h2>{<TextAny text={props.name} />}</h2>
-            <hr />
+            <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
+            <hr className="widgetCardHR" />
             <p>Best seller</p>
             <p style={{ fontWeight: "bold" }}>Słuchawki RAZER Kraken X Lite</p>
             <p>Worst seller</p>
@@ -82,9 +90,26 @@ function WidgetThumbnail(props) {
 
         {props.name === "salesChart" ? (
           <div className="widget_thumbnail_content">
-            <h2>{<TextAny text={props.name} />}</h2>
-            <hr />
-            <p>Go to data from chart:</p>
+            <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
+            <hr className="widgetCardHR" />
+            <p>
+              <TextAny text="analyzeData" />
+            </p>
+            <div className="rightIcon">
+              <img src={chartIcon} alt="stars" height="100" />
+            </div>
+
+            <button className="buttonClicked roundedButton">
+              <TextAny text="lastWeek" />
+            </button>
+            <br />
+            <button className="buttonClicked roundedButton">
+              <TextAny text="lastMonth" />
+            </button>
+            <br />
+            <button className="buttonClicked roundedButton">
+              <TextAny text="lastYear" />
+            </button>
           </div>
         ) : (
           ""
@@ -92,9 +117,13 @@ function WidgetThumbnail(props) {
 
         {props.name === "salesAdvice" ? (
           <div className="widget_thumbnail_content">
-            <h2>{<TextAny text={props.name} />}</h2>
-            <hr />
-            <p>porady</p>
+            <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
+            <hr className="widgetCardHR" />
+            <p style={{marginRight: "12%"}}>Dodanie zdjęcia produktu, zwiększa liczbę zgłoszeń o ponad 60%. Aby zadbać o odpowiednią jakość zdjęcie wykonaj w oświetlonym pomieszczeniu!</p>
+            <img style={{float: "right", marginTop: "-12%", marginRight: "4%"}} src={arrowDark} alt="back" height="20" />
+            
+            <p style={{marginRight: "12%"}}>Opis produktu, który zamieszczach w ofercie powinien być krótki, a zarazem treściwy. Kupujący czytają najczęściej tylko 2 pierwsze zdania!!!</p>
+            <img style={{float: "right", marginTop: "-12%", marginRight: "4%"}} src={arrowDark} alt="back" height="20" />
           </div>
         ) : (
           ""
