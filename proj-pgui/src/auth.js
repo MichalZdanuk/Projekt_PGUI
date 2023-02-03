@@ -13,11 +13,10 @@ export function authenticate(username) {
 export function RequiredAuth(props) {
   let { authState } = React.useContext(ctxAuth);
   let location = useLocation();
-  console.log(location);
   if (!authState.czyZalogowany) {
     return (
       <Navigate
-        to="/login"
+        to="/"
         state={{
           msg: "Musisz być zalogowany, aby uzyskać dostęp do tej strony.",
           pathTo: location.pathname

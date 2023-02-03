@@ -12,10 +12,11 @@ import RankingOfOffersWidget from "./widgets/RankingOfOffersWidget";
 import SalesAdviceWidget from "./widgets/SalesAdviceWidget";
 import SalesChartWidget from "./widgets/SalesChartWidget";
 
-
 import { ctxAuth } from "./auth";
 import React from "react";
-import './styles.css';
+import "./styles.css";
+
+import { LangContextProvider } from "./language/lang";
 
 import {
   Route,
@@ -61,9 +62,11 @@ function App() {
   );
 
   return (
-    <ctxAuth.Provider value={{ authState, zaloguj, wyloguj }}>
-      <RouterProvider router={router}></RouterProvider>
-    </ctxAuth.Provider>
+    <LangContextProvider>
+      <ctxAuth.Provider value={{ authState, zaloguj, wyloguj }}>
+        <RouterProvider router={router}></RouterProvider>
+      </ctxAuth.Provider>
+    </LangContextProvider>
   );
 }
 

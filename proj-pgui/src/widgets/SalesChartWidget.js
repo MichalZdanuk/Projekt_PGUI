@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import "../styles.css";
 import SalesLineChart from "../charts/SalesLineChart";
 import SalesBarChart from "../charts/SalesBarChart";
 import { useState } from "react";
@@ -12,7 +10,7 @@ function SalesChartWidget() {
   }
   return (
     <div className="widgetCard">
-      <p className="widgetTitle">Wykres Sprzedaży</p>
+      <p className="widgetTitle">Sales Chart</p>
       <hr className="widgetTitle" />
       <div style={{marginLeft: "32%", marginTop: "2%"}}>
       <ChartTypeButton name="LINIOWY" handleClick={changeChartType} buttonValue="lineChart" isChosen={chartType === "lineChart" ? "yes": "no"}/>

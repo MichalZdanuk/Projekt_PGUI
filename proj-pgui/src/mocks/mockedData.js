@@ -83,13 +83,13 @@ export const opinieklientow = [
   ];
   
   // widget JakoscSprzedazy
-  export const pobranaJakoscSprzedazy = {
-    listaOcen: [
-      { nazwaAspektu: "Punktualność", ocenaPunktowa: 7 },
-      { nazwaAspektu: "Uprzejmość", ocenaPunktowa: 4 },
-      { nazwaAspektu: "Dostawa", ocenaPunktowa: 3 },
-      { nazwaAspektu: "Brak Usterek", ocenaPunktowa: 5 },
-      { nazwaAspektu: "Kontakt", ocenaPunktowa: 8 }
+  export const receivedQualityOfSales = {
+    listOfGrades: [
+      { aspectName: "Punktualność", receivedPoints: 7 },
+      { aspectName: "Uprzejmość", receivedPoints: 4 },
+      { aspectName: "Dostawa", receivedPoints: 3 },
+      { aspectName: "Brak Usterek", receivedPoints: 5 },
+      { aspectName: "Kontakt", receivedPoints: 8 }
     ]
   };
   

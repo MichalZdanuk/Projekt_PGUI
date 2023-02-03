@@ -12,6 +12,10 @@ body {
   padding: 10px;
 }
 
+.rightIcon{
+  float: right; margin: 0px 15px 15px 0px;
+}
+
 .footer {
   border-top: solid 1px;
   background: #2aad15;
@@ -62,6 +66,10 @@ body {
   border-color: #b2a8b8;
 }
 
+.widgetCardBackground{
+  background: #744c95;
+}
+
 .buttonClicked {
   background-color: #e3b4ff;
   color: #000000;
@@ -109,4 +117,16 @@ hr.widgetTitle {
   margin-right: 20%;
   text-align: center;
   font-size: 40px;
+}
+
+h4.worstAspects {
+  color: red;
+  font-weight: bold;
+}
+
+div.worstAspects {
+  color: red;
+  border-radius: 15px;
+  border: solid 3px;
+  width: 200px;
 }

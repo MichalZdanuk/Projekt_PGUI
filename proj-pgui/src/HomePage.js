@@ -24,7 +24,7 @@ function HomePage() {
               (wyloguj)
             </a>
           ) : (
-            <Link to="/login">(zaloguj)</Link>
+            <Link to="/">(zaloguj)</Link>
           )}
         </div>
       </div>
