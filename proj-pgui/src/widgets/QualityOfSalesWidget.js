@@ -24,7 +24,7 @@ function QualityOfSalesWidget() {
   return (
     <RequiredAuth>
       <div className="widgetCard widgetCardBackground">
-        <p className="widgetTitle largeFontSize">
+        <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="orders" />
         </p>
         <hr className="widgetTitle" />

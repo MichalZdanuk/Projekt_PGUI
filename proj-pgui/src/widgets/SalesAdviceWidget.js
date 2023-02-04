@@ -1,10 +1,16 @@
 import { RequiredAuth } from "../auth";
+import { TextAny } from "../language/langTexts";
 
 function SalesAdviceWidget() {
   return (
     <RequiredAuth>
-      <h1>porady</h1>
-      <p>ddddddddddddddddddddd</p>
+      <div className="widgetCard widgetCardBackground">
+        <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
+          <TextAny text="salesAdvice" />
+        </p>
+        <hr className="widgetTitle" />
+        <p>ddd</p>
+      </div>
     </RequiredAuth>
   );
 }

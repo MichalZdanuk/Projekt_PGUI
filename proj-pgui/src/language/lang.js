@@ -13,7 +13,7 @@ const pl = {
   qualityRate: "Ocena Jakości: ",
   receivedCategory: "Przyznana kategoria: ",
   worstAspects: "Najgorsze Aspekty",
-  welcome: "Witaj ",
+  welcome: "Witaj, ",
   checkDetails: "SPRAWDŹ SZCZEGÓŁY",
   lineChart: "LINIOWY",
   barChart: "SŁUPKOWY",
@@ -44,7 +44,7 @@ const pl = {
   NOTSENT: "NIEWYSŁANE",
   NOTPAID: "NIEOPŁACONE",
   REFUNDS: "ZWROTY",
-  currentlyProcessedOrders: "Obecnie realizowane zamówienia"
+  currentlyProcessedOrders: "Obecnie realizowane zamówienia",
 };
 
 const en = {
@@ -59,7 +59,7 @@ const en = {
   qualityRate: "Quality Rate: ",
   receivedCategory: "Received Category: ",
   worstAspects: "Worst Aspects",
-  welcome: "Welcome ",
+  welcome: "Welcome, ",
   checkDetails: "CHECK DETAILS",
   lineChart: "LINE",
   barChart: "BAR",
@@ -90,7 +90,7 @@ const en = {
   NOTSENT: "NOT SENT",
   NOTPAID: "NOT PAID",
   REFUNDS: "REFUNDS",
-  currentlyProcessedOrders: "Currently processed orders"
+  currentlyProcessedOrders: "Currently processed orders",
 };
 
 export const LangContext = React.createContext({

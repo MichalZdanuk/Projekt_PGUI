@@ -40,7 +40,7 @@ function OrdersWidget() {
   return (
     <RequiredAuth>
       <div className="widgetCard widgetCardBackground">
-        <p className="widgetTitle largeFontSize">
+        <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="orders" />
         </p>
         <hr className="widgetTitle" />
@@ -81,13 +81,22 @@ function OrdersTable(props) {
       <col width="250px" />
       <tr>
         <td className="orderTableColumn">
-          {props.ordersList.filter((order) => order.orderType === "NOTPAID").length}
+          {
+            props.ordersList.filter((order) => order.orderType === "NOTPAID")
+              .length
+          }
         </td>
         <td className="orderTableColumn">
-          {props.ordersList.filter((order) => order.orderType === "NOTSENT").length}
+          {
+            props.ordersList.filter((order) => order.orderType === "NOTSENT")
+              .length
+          }
         </td>
         <td className="orderTableColumn">
-          {props.ordersList.filter((order) => order.orderType === "REFUNDS").length}
+          {
+            props.ordersList.filter((order) => order.orderType === "REFUNDS")
+              .length
+          }
         </td>
       </tr>
     </table>
@@ -140,10 +149,10 @@ function ListOfOrders(props) {
 
 function Order(props) {
   return (
-    <div className="commentBox">
-      <p className="opinionUsername plainFontSize">ID: {props.id}</p>
-      <p className="opinionText">{props.description}</p>
-      <p className="commentDate">
+    <div className="orderBox">
+      <p className="orderID plainFontSize">ID: {props.id}</p>
+      <p className="orderText">{props.description}</p>
+      <p className="orderDate">
         <i>{props.date}</i>
       </p>
       <br />

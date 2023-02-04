@@ -1,6 +1,5 @@
 import startsRating from "./icons/startsRating.png";
 import chartIcon from "./icons/chartIcon.png";
-import arrowDark from "./icons/arrowDark.png";
 
 import { useNavigate } from "react-router-dom";
 import { TextAny } from "./language/langTexts";
@@ -17,36 +16,33 @@ function WidgetThumbnail(props) {
     >
       {props.name === "orders" ? (
         <div className="widget_thumbnail_content">
-          <p className="widgetCardTitle adjustedTextLargeWidgetTitle">
+          <p className="widgetCardTitle adjustedTextLargeWidgetThumbnailTitle">
             {<TextAny text={props.name} />}
           </p>
           <hr className="widgetCardHR" />
           <div style={{ width: "60%", float: "left" }}>
-          <p className="adjustedTextLargeWidgetThumbnail">
-            <TextAny text="notPaid" />&emsp;
-            <span className="numberOfOrders">
-            12
-            </span>
-            <br />
-            <TextAny text="notSent" />&emsp;
-            <span className="numberOfOrders">
-            15
-            </span>
-            <br />
-            <TextAny text="refunds" />&emsp;<span className="numberOfOrders">
-            10
-            </span>
-            <br />
-            <br />
-          </p>
-          <div className="centeredElement">
-            <button className="roundedButton buttonClicked largeFontSize">
-              <TextAny text="orders" />
-            </button>
-          </div>
+            <p className="adjustedTextLargeWidgetThumbnail">
+              <TextAny text="notPaid" />
+              &emsp;
+              <span className="numberOfOrders">12</span>
+              <br />
+              <TextAny text="notSent" />
+              &emsp;
+              <span className="numberOfOrders">15</span>
+              <br />
+              <TextAny text="refunds" />
+              &emsp;<span className="numberOfOrders">10</span>
+              <br />
+              <br />
+            </p>
+            <div className="centeredElement">
+              <button className="roundedButton buttonClicked largeFontSize">
+                <TextAny text="orders" />
+              </button>
+            </div>
           </div>
           <div style={{ width: "35%", float: "right", marginRight: "5%" }}>
-          <p className="centeredElement">
+            <p className="centeredElement">
               <emph style={{ fontSize: "70px", fontWeight: "bold" }}>37</emph>
               <br />
               <TextAny text="currentlyProcessedOrders" />
@@ -59,7 +55,7 @@ function WidgetThumbnail(props) {
 
       {props.name === "qualityOfSales" ? (
         <div className="widget_thumbnail_content">
-          <p className="widgetCardTitle adjustedTextLargeWidgetTitle">
+          <p className="widgetCardTitle adjustedTextLargeWidgetThumbnailTitle">
             {<TextAny text={props.name} />}
           </p>
           <hr className="widgetCardHR" />
@@ -84,7 +80,7 @@ function WidgetThumbnail(props) {
 
       {props.name === "buyersReviews" ? (
         <div className="widget_thumbnail_content">
-          <p className="widgetCardTitle adjustedTextLargeWidgetTitle">
+          <p className="widgetCardTitle adjustedTextLargeWidgetThumbnailTitle">
             {<TextAny text={props.name} />}
           </p>
           <hr className="widgetCardHR" />
@@ -123,7 +119,7 @@ function WidgetThumbnail(props) {
 
       {props.name === "rankingOfOffers" ? (
         <div className="widget_thumbnail_content">
-          <p className="widgetCardTitle adjustedTextLargeWidgetTitle">
+          <p className="widgetCardTitle adjustedTextLargeWidgetThumbnailTitle">
             {<TextAny text={props.name} />}
           </p>
           <hr className="widgetCardHR" />
@@ -144,7 +140,7 @@ function WidgetThumbnail(props) {
 
       {props.name === "salesChart" ? (
         <div className="widget_thumbnail_content">
-          <p className="widgetCardTitle adjustedTextLargeWidgetTitle">
+          <p className="widgetCardTitle adjustedTextLargeWidgetThumbnailTitle">
             {<TextAny text={props.name} />}
           </p>
           <hr className="widgetCardHR" />
@@ -173,33 +169,23 @@ function WidgetThumbnail(props) {
 
       {props.name === "salesAdvice" ? (
         <div className="widget_thumbnail_content">
-          <p className="widgetCardTitle adjustedTextLargeWidgetTitle">
+          <p className="widgetCardTitle adjustedTextLargeWidgetThumbnailTitle">
             {<TextAny text={props.name} />}
           </p>
           <hr className="widgetCardHR" />
-          <p style={{ marginRight: "12%" }}>
-            Dodanie zdjęcia produktu, zwiększa liczbę zgłoszeń o ponad 60%. Aby
-            zadbać o odpowiednią jakość zdjęcie wykonaj w oświetlonym
-            pomieszczeniu!
-          </p>
-          <img
-            style={{ float: "right", marginTop: "-12%", marginRight: "4%" }}
-            src={arrowDark}
-            alt="back"
-            height="20"
-          />
-
-          <p style={{ marginRight: "12%" }}>
-            Opis produktu, który zamieszczach w ofercie powinien być krótki, a
-            zarazem treściwy. Kupujący czytają najczęściej tylko 2 pierwsze
-            zdania!!!
-          </p>
-          <img
-            style={{ float: "right", marginTop: "-12%", marginRight: "4%" }}
-            src={arrowDark}
-            alt="back"
-            height="20"
-          />
+          <ul>
+            <li>
+              Dodanie zdjęcia produktu, zwiększa liczbę zgłoszeń o ponad 60%.
+              Aby zadbać o odpowiednią jakość zdjęcie wykonaj w oświetlonym
+              pomieszczeniu!
+            </li>
+            <br />
+            <li>
+              Opis produktu, który zamieszczach w ofercie powinien być krótki, a
+              zarazem treściwy. Kupujący czytają najczęściej tylko 2 pierwsze
+              zdania!!!
+            </li>
+          </ul>
         </div>
       ) : (
         ""

@@ -13,7 +13,7 @@ function SalesChartWidget() {
   return (
     <RequiredAuth>
       <div className="widgetCard">
-        <p className="widgetTitle largeFontSize">
+        <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="salesChart" />
         </p>
         <hr className="widgetTitle" />

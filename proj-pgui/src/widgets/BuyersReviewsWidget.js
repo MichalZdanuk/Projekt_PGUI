@@ -15,7 +15,7 @@ function BuyersReviewsWidget() {
   return (
     <RequiredAuth>
       <div className="widgetCard widgetCardBackground">
-        <p className="widgetTitle largeFontSize">
+        <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="buyersReviews" />
         </p>
         <hr className="widgetTitle" />
