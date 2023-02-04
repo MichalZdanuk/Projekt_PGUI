@@ -28,7 +28,15 @@ const pl = {
   lastYear: "ostatni rok",
   analyzeData: "Analizuj dane z wykresu:",
   light: "JASNY",
-  dark: "CIEMNY"
+  dark: "CIEMNY",
+  customersReviewThumbnail: "pozytywnych opinii w ostatnim miesiącu",
+  positiveOpinion: "pozytywna",
+  POSITIVE: "POZYTYWNE",
+  negativeOpinion: "negatywna",
+  NEGATIVE: "NEGATYWNE",
+  ALL: "WSZYSTKIE",
+  bestSeller: "Najlepiej sprzedawane",
+  worstSeller: "Najgorzej sprzedawane"
 };
 
 const en = {
@@ -58,7 +66,15 @@ const en = {
   lastYear: "last year",
   analyzeData: "Analize data from chart:",
   light: "LIGHT",
-  dark: "DARK"
+  dark: "DARK",
+  customersReviewThumbnail: "positive opinions last month",
+  positiveOpinion: "positive",
+  POSITIVE: "POSITIVE",
+  negativeOpinion: "negative",
+  NEGATIVE: "NEGATIVE",
+  ALL: "ALL",
+  bestSeller: "Best seller",
+  worstSeller: "Worst seller"
 };
 
 export const LangContext = React.createContext({

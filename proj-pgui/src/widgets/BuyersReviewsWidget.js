@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { customerReviews } from "../mocks/mockedData";
 import { TextAny } from "../language/langTexts";
+import { RequiredAuth } from "../auth";
 
 const receivedCustomerReviews = customerReviews;
 function BuyersReviewsWidget() {
@@ -12,6 +13,8 @@ function BuyersReviewsWidget() {
   };
 
   return (
+    <RequiredAuth>
+
     <div className="widgetCard widgetCardBackground">
       <p className="widgetTitle largeFontSize">
         <TextAny text="buyersReviews" />
@@ -37,6 +40,8 @@ function BuyersReviewsWidget() {
       <ListOfOpinions type={opinionType} opinionsList={receivedCustomerReviews} />
       <br />
     </div>
+    </RequiredAuth>
+
   );
 }
 
@@ -52,7 +57,7 @@ function OpinionTypeButton(props) {
         onClick={props.handleOpinionClick}
         value={props.type}
       >
-        {props.type}
+        <TextAny text={props.type} />
       </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </>
   );
@@ -101,9 +106,9 @@ function Opinion(props) {
         <emph>{props.username}</emph>
         <emph style={{ float: "right", marginRight: "5%" }}>
           {props.opinionType === "positive" ? (
-            <span className="positive">pozytywna</span>
+            <span className="positive"><TextAny text="positiveOpinion" /></span>
           ) : (
-            <span className="negative">negatywna</span>
+            <span className="negative"><TextAny text="negativeOpinion" /></span>
           )}
         </emph>
       </p>

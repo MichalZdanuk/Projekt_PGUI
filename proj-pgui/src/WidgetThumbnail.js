@@ -1,5 +1,4 @@
 import startsRating from "./icons/startsRating.png";
-import qualityIcon from "./icons/qualityIcon.png";
 import chartIcon from "./icons/chartIcon.png";
 import arrowDark from "./icons/arrowDark.png"
 
@@ -9,13 +8,14 @@ import { TextAny } from "./language/langTexts";
 function WidgetThumbnail(props) {
   const navigate = useNavigate();
   return (
-    <>
+    
       <div
         className="widget_thumbnail"
-        onClick={(e) => {
-          e.preventDefault();
-          navigate(props.location);
-        }}
+        // onClick={(e) => {
+        //   // e.preventDefault();
+        //   navigate(props.location);
+        // }}
+        onMouseUp={ e => {e.stopPropagation(); navigate(props.location); }}
       >
         {props.name === "orders" ? (
           <div className="widget_thumbnail_content">
@@ -39,9 +39,6 @@ function WidgetThumbnail(props) {
 
         {props.name === "qualityOfSales" ? (
           <div className="widget_thumbnail_content">
-            {/* <div className="rightIcon">
-              <img src={qualityIcon} alt="quality" height="50" />
-            </div> */}
             <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
             <hr className="widgetCardHR" />
             <div className="centeredElement">
@@ -67,7 +64,22 @@ function WidgetThumbnail(props) {
           <div className="widget_thumbnail_content">
             <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
             <hr className="widgetCardHR" />
-            <p>opinie</p>
+            <div style={{width: "60%", float: "left"}}>
+            <p> <emph style={{fontWeight: "bold", fontSize: "18px"}}>DonPedro</emph><br/>
+            Dobra kamera. Jak na cenę 200 PLN to chyba najlepszy dostępny na stronie...</p>
+
+            <p> <emph style={{fontWeight: "bold", fontSize: "18px"}}>Caro33</emph><br/>
+            Te słuchawki warte są każdych pieniędzy! Profesjonalne wykonanie, szeroka scena dźwięku...</p>
+          </div>
+          <div style={{width: "40%", float: "right"}}>
+            <p className="centeredElement">
+            <emph style={{ fontSize: "100px", fontWeight: "bold"}}>
+              70%
+              </emph>
+            <br />
+            <TextAny text="customersReviewThumbnail" />
+            </p>
+            </div>
           </div>
         ) : (
           ""
@@ -77,9 +89,9 @@ function WidgetThumbnail(props) {
           <div className="widget_thumbnail_content">
             <p className="widgetCardTitle largeFontSize">{<TextAny text={props.name} />}</p>
             <hr className="widgetCardHR" />
-            <p>Best seller</p>
+            <p><TextAny text="bestSeller" /></p>
             <p style={{ fontWeight: "bold" }}>Słuchawki RAZER Kraken X Lite</p>
-            <p>Worst seller</p>
+            <p><TextAny text="worstSeller" /></p>
             <p style={{ fontWeight: "bold" }}>
               Smartfon SAMSUNG Galaxy S23 8/256GB 5G
             </p>
@@ -129,7 +141,7 @@ function WidgetThumbnail(props) {
           ""
         )}
       </div>
-    </>
+    
   );
 }
 

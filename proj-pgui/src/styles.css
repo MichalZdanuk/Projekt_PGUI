@@ -53,7 +53,7 @@ body {
 
 .languageButon {
   background-color: #744c95;
-  color: #b2a8b8;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -196,4 +196,16 @@ div.worstAspects {
   margin-left: 3%;
   margin-right: 3%;
   color: grey;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
