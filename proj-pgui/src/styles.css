@@ -17,6 +17,11 @@ body {
 .adjustedTextLargeWidgetThumbnail{
   font-size: calc(15px + 0.25vw);
 }
+
+.adjustedTextLargeWidgetTitle{
+  font-size: calc(25px + 0.25vw);
+}
+
 .right {
   position: absolute;
   top: 2%;
@@ -249,4 +254,9 @@ table.center {
   background-color: #411d62;
   color: #fee9ff;
   text-align: center;
+}
+
+.numberOfOrders{
+  float: right;
+  margin-right: 10%
 }

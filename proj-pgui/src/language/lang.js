@@ -43,7 +43,8 @@ const pl = {
   mustBeLogged: "Musisz być zalogowany, aby uzyskać dostęp do tej strony",
   NOTSENT: "NIEWYSŁANE",
   NOTPAID: "NIEOPŁACONE",
-  REFUNDS: "ZWROTY"
+  REFUNDS: "ZWROTY",
+  currentlyProcessedOrders: "Obecnie realizowane zamówienia"
 };
 
 const en = {
@@ -88,7 +89,8 @@ const en = {
   mustBeLogged: "You must be logged to get access to this page",
   NOTSENT: "NOT SENT",
   NOTPAID: "NOT PAID",
-  REFUNDS: "REFUNDS"
+  REFUNDS: "REFUNDS",
+  currentlyProcessedOrders: "Currently processed orders"
 };
 
 export const LangContext = React.createContext({
