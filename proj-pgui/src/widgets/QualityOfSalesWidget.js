@@ -1,5 +1,6 @@
 import { receivedQualityOfSales } from "../mocks/mockedData";
 import { TextAny } from "../language/langTexts";
+import { RequiredAuth } from "../auth";
 
 const qualityOfSales = receivedQualityOfSales;
 function QualityOfSalesWidget() {
@@ -20,17 +21,21 @@ function QualityOfSalesWidget() {
   receivedPoints = calculatePoints();
 
   return (
-    <div className="widgetCard widgetCardBackground">
-      <p className="widgetTitle largeFontSize"><TextAny text="orders" /></p>
-      <hr className="widgetTitle" />
-      <div style={{ marginLeft: "5%", marginTop: "2%" }}>
-        <QualityAspectsTable listOfGrades={qualityOfSales.listOfGrades} />
-        <Quality points={receivedPoints} />
-        <SellerCategory grade={40} />
-        <br />
-        <WorstAspects />
+    <RequiredAuth>
+      <div className="widgetCard widgetCardBackground">
+        <p className="widgetTitle largeFontSize">
+          <TextAny text="orders" />
+        </p>
+        <hr className="widgetTitle" />
+        <div style={{ marginLeft: "5%", marginTop: "2%" }}>
+          <QualityAspectsTable listOfGrades={qualityOfSales.listOfGrades} />
+          <Quality points={receivedPoints} />
+          <SellerCategory grade={40} />
+          <br />
+          <WorstAspects />
+        </div>
       </div>
-    </div>
+    </RequiredAuth>
   );
 }
 
@@ -61,7 +66,8 @@ function Quality(props) {
   }
   return (
     <h2>
-      <TextAny text="qualityRate" />{props.points} / {maxPoints * 10}
+      <TextAny text="qualityRate" />
+      {props.points} / {maxPoints * 10}
     </h2>
   );
 }
@@ -80,7 +86,9 @@ function WorstAspects() {
 
   return (
     <div>
-      <h4 className="worstAspects"><TextAny text="worstAspects" /></h4>
+      <h4 className="worstAspects">
+        <TextAny text="worstAspects" />
+      </h4>
       <div className="worstAspects">
         <div style={{ marginLeft: "4%" }}>
           {list[0]} <br /> {list[1]} <br /> {list[2]}
@@ -108,7 +116,12 @@ function SellerCategory(props) {
   };
   category = calculateCategory(props.grade);
 
-  return <h2><TextAny text="receivedCategory" />{category}</h2>;
+  return (
+    <h2>
+      <TextAny text="receivedCategory" />
+      {category}
+    </h2>
+  );
 }
 
 export default QualityOfSalesWidget;

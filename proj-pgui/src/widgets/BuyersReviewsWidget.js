@@ -14,34 +14,35 @@ function BuyersReviewsWidget() {
 
   return (
     <RequiredAuth>
-
-    <div className="widgetCard widgetCardBackground">
-      <p className="widgetTitle largeFontSize">
-        <TextAny text="buyersReviews" />
-      </p>
-      <hr className="widgetTitle" />
-      <div className="centeredElement">
-        <OpinionTypeButton
-          type="ALL"
-          isChosen={opinionType === "ALL" ? "yes" : "no"}
-          handleOpinionClick={handleOpinionClick}
+      <div className="widgetCard widgetCardBackground">
+        <p className="widgetTitle largeFontSize">
+          <TextAny text="buyersReviews" />
+        </p>
+        <hr className="widgetTitle" />
+        <div className="centeredElement">
+          <OpinionTypeButton
+            type="ALL"
+            isChosen={opinionType === "ALL" ? "yes" : "no"}
+            handleOpinionClick={handleOpinionClick}
+          />
+          <OpinionTypeButton
+            type="POSITIVE"
+            isChosen={opinionType === "POSITIVE" ? "yes" : "no"}
+            handleOpinionClick={handleOpinionClick}
+          />
+          <OpinionTypeButton
+            type="NEGATIVE"
+            isChosen={opinionType === "NEGATIVE" ? "yes" : "no"}
+            handleOpinionClick={handleOpinionClick}
+          />
+        </div>
+        <ListOfOpinions
+          type={opinionType}
+          opinionsList={receivedCustomerReviews}
         />
-        <OpinionTypeButton
-          type="POSITIVE"
-          isChosen={opinionType === "POSITIVE" ? "yes" : "no"}
-          handleOpinionClick={handleOpinionClick}
-        />
-        <OpinionTypeButton
-          type="NEGATIVE"
-          isChosen={opinionType === "NEGATIVE" ? "yes" : "no"}
-          handleOpinionClick={handleOpinionClick}
-        />
+        <br />
       </div>
-      <ListOfOpinions type={opinionType} opinionsList={receivedCustomerReviews} />
-      <br />
-    </div>
     </RequiredAuth>
-
   );
 }
 
@@ -58,7 +59,8 @@ function OpinionTypeButton(props) {
         value={props.type}
       >
         <TextAny text={props.type} />
-      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </>
   );
 }
@@ -106,9 +108,13 @@ function Opinion(props) {
         <emph>{props.username}</emph>
         <emph style={{ float: "right", marginRight: "5%" }}>
           {props.opinionType === "positive" ? (
-            <span className="positive"><TextAny text="positiveOpinion" /></span>
+            <span className="positive">
+              <TextAny text="positiveOpinion" />
+            </span>
           ) : (
-            <span className="negative"><TextAny text="negativeOpinion" /></span>
+            <span className="negative">
+              <TextAny text="negativeOpinion" />
+            </span>
           )}
         </emph>
       </p>
@@ -118,7 +124,6 @@ function Opinion(props) {
       </p>
       <br />
       <br />
-
     </div>
   );
 }
