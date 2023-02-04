@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ctxAuth, authenticate } from "./auth";
+import { TextAny } from "./language/langTexts";
 
 function LoginPage() {
   const [username, setUsername] = React.useState("");
-  let { authState, zaloguj } = React.useContext(ctxAuth);
+  let { zaloguj } = React.useContext(ctxAuth);
   let { state } = useLocation();
   const [pathTo] = React.useState(state?.pathTo);
   const [msg, setMsg] = React.useState(state?.msg);
@@ -16,14 +17,14 @@ function LoginPage() {
       zaloguj(username);
       navigate(pathTo ?? "/home");
     } else {
-      setMsg("Niepoprawna nazwa użytkownika");
+      setMsg(<TextAny text="incorrectUsername" />);
     }
   };
   return (
     <div className="loginPanel">
       {msg ? <div style={{ marginBottom: "1em" }}>{msg}</div> : ""}
       <form onSubmit={cmdLogin}>
-        <h1 style={{ fontWeight: "bold", paddingTop: "100px", textAlign: "center" }}>Zaloguj się, aby zobaczyć DashBoard Sprzedawcy</h1>
+        <h1 style={{ fontWeight: "bold", paddingTop: "100px", textAlign: "center" }}><TextAny text="pleaseLoginIn" /></h1>
         <br />
         <input
           className="loginInput"
@@ -36,7 +37,7 @@ function LoginPage() {
         <br />
         <br />
         <div className="centeredElement">
-        <button className="buttonClicked roundedButton largeFontSize" onClick={cmdLogin}>Zaloguj</button>
+        <button className="buttonClicked roundedButton largeFontSize" onClick={cmdLogin}><TextAny text="logIn" /></button>
         </div>
         <br />
         <br />

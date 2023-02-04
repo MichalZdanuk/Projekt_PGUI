@@ -18,7 +18,7 @@ export function RequiredAuth(props) {
       <Navigate
         to="/"
         state={{
-          msg: "Musisz być zalogowany, aby uzyskać dostęp do tej strony.",
+          msg: "You must be logged to get access to this page",
           pathTo: location.pathname
         }}
       />

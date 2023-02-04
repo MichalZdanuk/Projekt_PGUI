@@ -3,12 +3,11 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { ctxAuth } from "./auth";
 import backIcon from "./icons/backIcon.png"
 
-import { LangContext, LangContextProvider } from "./language/lang";
 import { LangSwitcher } from "./language/langSwitcher";
 import { TextAny } from "./language/langTexts";
 
 export function DashBoardLayout() {
-  let { authState, wyloguj } = React.useContext(ctxAuth);
+  let { authState } = React.useContext(ctxAuth);
   let location = useLocation();
   const navigate = useNavigate();
   return (

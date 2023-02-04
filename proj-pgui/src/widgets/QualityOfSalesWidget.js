@@ -1,6 +1,7 @@
 import { receivedQualityOfSales } from "../mocks/mockedData";
 import { TextAny } from "../language/langTexts";
 import { RequiredAuth } from "../auth";
+import "../styles.css";
 
 const qualityOfSales = receivedQualityOfSales;
 function QualityOfSalesWidget() {
@@ -27,7 +28,7 @@ function QualityOfSalesWidget() {
           <TextAny text="orders" />
         </p>
         <hr className="widgetTitle" />
-        <div style={{ marginLeft: "5%", marginTop: "2%" }}>
+        <div style={{ marginLeft: "5%", marginRight: "5%", marginTop: "2%" }}>
           <QualityAspectsTable listOfGrades={qualityOfSales.listOfGrades} />
           <Quality points={receivedPoints} />
           <SellerCategory grade={40} />
@@ -47,7 +48,7 @@ function QualityAspectsTable(props) {
     <th>{aspect.receivedPoints}/10</th>
   ));
   return (
-    <table border="2px">
+    <table className="center" border="2px">
       <col width="170px" />
       <col width="170px" />
       <col width="170px" />

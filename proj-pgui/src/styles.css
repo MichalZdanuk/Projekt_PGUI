@@ -222,3 +222,31 @@ div.worstAspects {
   margin-left: 1%;
   margin-right: 1%;
 }
+
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.commentBox{
+  border-radius: 15px;
+  border: solid 3px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  background-color: #e3b4ff;
+}
+
+.commentDate{
+  float: right;
+  margin-right: 5%;
+  font-weight: bold;
+  color: #411d62;
+}
+
+.orderTableColumn{
+  background-color: #411d62;
+  color: #fee9ff;
+  text-align: center;
+}

@@ -36,7 +36,14 @@ const pl = {
   NEGATIVE: "NEGATYWNE",
   ALL: "WSZYSTKIE",
   bestSeller: "Najlepiej sprzedawane",
-  worstSeller: "Najgorzej sprzedawane"
+  worstSeller: "Najgorzej sprzedawane",
+  incorrectUsername: "Niepoprawna nazwa użytkownika",
+  pleaseLoginIn: "Zaloguj się, aby zobaczyć DashBoard Sprzedawcy",
+  logIn: "Zaloguj",
+  mustBeLogged: "Musisz być zalogowany, aby uzyskać dostęp do tej strony",
+  NOTSENT: "NIEWYSŁANE",
+  NOTPAID: "NIEOPŁACONE",
+  REFUNDS: "ZWROTY"
 };
 
 const en = {
@@ -74,7 +81,14 @@ const en = {
   NEGATIVE: "NEGATIVE",
   ALL: "ALL",
   bestSeller: "Best seller",
-  worstSeller: "Worst seller"
+  worstSeller: "Worst seller",
+  incorrectUsername: "Incorrect username",
+  pleaseLoginIn: "Log in to see Seller's DashBoard",
+  logIn: "Log in",
+  mustBeLogged: "You must be logged to get access to this page",
+  NOTSENT: "NOT SENT",
+  NOTPAID: "NOT PAID",
+  REFUNDS: "REFUNDS"
 };
 
 export const LangContext = React.createContext({
