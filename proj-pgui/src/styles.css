@@ -10,6 +10,13 @@ body {
   color: #fee9ff;
 }
 
+.adjustedTextWidgetThumbnail{
+  font-size: calc(10px + 0.25vw);
+}
+
+.adjustedTextLargeWidgetThumbnail{
+  font-size: calc(15px + 0.25vw);
+}
 .right {
   position: absolute;
   top: 2%;
@@ -49,6 +56,7 @@ body {
 .chartCard {
   margin-left: 8%;
   margin-right: 8%;
+  color: #FEE9FF;
 }
 
 .languageButon {
@@ -69,7 +77,7 @@ body {
 }
 
 .widgetCardHR{
-  margin-bottom: 20px;
+  margin-bottom: 1%;
 }
 
 .widgetCard {
@@ -195,7 +203,7 @@ div.worstAspects {
 .opinionText{
   margin-left: 3%;
   margin-right: 3%;
-  color: grey;
+  color: #000000;
 }
 
 .column {
@@ -208,4 +216,9 @@ div.worstAspects {
   content: "";
   display: table;
   clear: both;
+}
+
+.leftAndRightMargins{
+  margin-left: 1%;
+  margin-right: 1%;
 }

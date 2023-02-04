@@ -35,8 +35,8 @@ function LoginPage() {
         />
         <br />
         <br />
-        <div style={{marginLeft: "40%"}}>
-        <button className="buttonClicked roundedButton" onClick={cmdLogin}>Zaloguj</button>
+        <div className="centeredElement">
+        <button className="buttonClicked roundedButton largeFontSize" onClick={cmdLogin}>Zaloguj</button>
         </div>
         <br />
         <br />

@@ -1,4 +1,4 @@
-// widget OpinieKupujacych
+// widget BuyersReviews
 export const customerReviews = [
     {
       id: 1,
@@ -82,7 +82,7 @@ export const customerReviews = [
     }
   ];
   
-  // widget JakoscSprzedazy
+  // widget QualityOfSales
   export const receivedQualityOfSales = {
     listOfGrades: [
       { aspectName: "Punktualność", receivedPoints: 7 },
@@ -93,173 +93,172 @@ export const customerReviews = [
     ]
   };
   
-  // widget RankingOfert
-  export const ofertySprzedawcy = [
+  // widget RankingOfOffers
+  export const sellerOffers = [
     {
       id: 1,
-      nazwaProduktu: "Kapelusz",
-      lsztuk: 60,
-      lwysw: 42039,
-      obrot: 3000,
-      sciezkaDoGrafiki: "/public/icons/hat.png"
+      productName: "Kapelusz",
+      numberOfItems: 60,
+      numberOfViews: 42039,
+      turnover: 3000,
+      picturePath: "/public/icons/hat.png"
     },
     {
       id: 2,
-      nazwaProduktu: "Okulary",
-      lsztuk: 100,
-      lwysw: 53247,
-      obrot: 4000,
-      sciezkaDoGrafiki: "/public/icons/eyeglasses.png"
+      productName: "Okulary",
+      numberOfItems: 100,
+      numberOfViews: 53247,
+      turnover: 4000,
+      picturePath: "/icons/eyeglasses.png"
     },
     {
       id: 3,
-      nazwaProduktu: "Słuchawki",
-      lsztuk: 200,
-      lwysw: 62948,
-      obrot: 80000,
-      sciezkaDoGrafiki: "/public/icons/headphone.png"
+      productName: "Słuchawki",
+      numberOfItems: 200,
+      numberOfViews: 62948,
+      turnover: 80000,
+      picturePath: "/icons/headphone.png"
     },
     {
       id: 4,
-      nazwaProduktu: "Koszulka",
-      lsztuk: 500,
-      lwysw: 89382,
-      obrot: 40000,
-      sciezkaDoGrafiki: "/public/icons/t-shirt.png"
+      productName: "Koszulka",
+      numberOfItems: 500,
+      numberOfViews: 89382,
+      turnover: 40000,
+      picturePath: "/icons/t-shirt.png"
     },
     {
       id: 5,
-      nazwaProduktu: "Klawiatura",
-      lsztuk: 150,
-      lwysw: 73204,
-      obrot: 20000,
-      sciezkaDoGrafiki: "/public/icons/keyboard.png"
+      productName: "Klawiatura",
+      numberOfItems: 150,
+      numberOfViews: 73204,
+      turnover: 20000,
+      picturePath: "/icons/keyboard.png"
     },
     {
       id: 6,
-      nazwaProduktu: "Myszka",
-      lsztuk: 50,
-      lwysw: 73204,
-      obrot: 20000,
-      sciezkaDoGrafiki: "/public/icons/mouse.png"
+      productName: "Myszka",
+      numberOfItems: 50,
+      numberOfViews: 73204,
+      turnover: 20000,
+      picturePath: "/icons/mouse.png"
     }
   ];
   
-  // widget Zamowienia
-  export const pobraneZamowienia = {
-    listaZamowien: [
+  // widget Orders
+  export const receivedOrders = {
+    listOfOrders: [
       {
-        typZamowienia: "NIEOPŁACONE",
+        orderType: "NOTPAID",
         id: 123,
-        data: "01.01.2023",
-        opis: "Smartfon SAMSUNG Galaxy A53 6/128GB"
+        date: "01.01.2023",
+        description: "Smartfon SAMSUNG Galaxy A53 6/128GB"
       },
       {
-        typZamowienia: "NIEOPŁACONE",
+        orderType: "NOTPAID",
         id: 124,
-        data: "01.01.2023",
-        opis: "Słuchawki nauszne SONY WH-1000XM5B"
+        date: "01.01.2023",
+        description: "Słuchawki nauszne SONY WH-1000XM5B"
       },
       {
-        typZamowienia: "NIEOPŁACONE",
+        orderType: "NOTPAID",
         id: 125,
-        data: "01.01.2023",
-        opis: "Mysz MAD DOG GM905"
+        date: "01.01.2023",
+        description: "Mysz MAD DOG GM905"
       },
       {
-        typZamowienia: "NIEOPŁACONE",
+        orderType: "NOTPAID",
         id: 329,
-        data: "01.01.2023",
-        opis: "Klawiatura MAD DOG GK850W Gateron"
+        date: "01.01.2023",
+        description: "Klawiatura MAD DOG GK850W Gateron"
       },
       {
-        typZamowienia: "NIEWYSŁANE",
+        orderType: "NOTSENT",
         id: 126,
-        data: "01.01.2023",
-        opis: "Klawiatura LOGITECH G413 TKL SE"
+        date: "01.01.2023",
+        description: "Klawiatura LOGITECH G413 TKL SE"
       },
       {
-        typZamowienia: "NIEWYSŁANE",
+        orderType: "NOTSENT",
         id: 127,
-        data: "01.01.2023",
-        opis: "Słuchawki douszne PHILIPS TAA6606BK"
+        date: "01.01.2023",
+        description: "Słuchawki douszne PHILIPS TAA6606BK"
       },
       {
-        typZamowienia: "NIEWYSŁANE",
+        orderType: "NOTSENT",
         id: 128,
-        data: "01.01.2023",
-        opis: "Mysz ASUS Rog Gladius III"
+        date: "01.01.2023",
+        description: "Mysz ASUS Rog Gladius III"
       },
       {
-        typZamowienia: "ZWROTY",
+        orderType: "REFUNDS",
         id: 129,
-        data: "01.01.2023",
-        opis: "Mysz STEELSERIES Rival 5"
+        date: "01.01.2023",
+        description: "Mysz STEELSERIES Rival 5"
       },
       {
-        typZamowienia: "ZWROTY",
+        orderType: "REFUNDS",
         id: 130,
-        data: "01.01.2023",
-        opis: "Smartfon REALME C33 4/64GB 6.5 Złoty"
+        date: "01.01.2023",
+        description: "Smartfon REALME C33 4/64GB 6.5 Złoty"
       },
       {
-        typZamowienia: "ZWROTY",
+        orderType: "REFUNDS",
         id: 131,
-        data: "01.01.2023",
-        opis: "Słuchawki nauszne PHILIPS Fidelio L3"
+        date: "01.01.2023",
+        description: "Słuchawki nauszne PHILIPS Fidelio L3"
       },
       {
-        typZamowienia: "ZWROTY",
+        orderType: "REFUNDS",
         id: 132,
-        data: "01.01.2023",
-        opis: "Mikrofon MAD DOG Pro GMC701"
+        date: "01.01.2023",
+        description: "Mikrofon MAD DOG Pro GMC701"
       },
       {
-        typZamowienia: "ZWROTY",
+        orderType: "REFUNDS",
         id: 133,
-        data: "01.01.2023",
-        opis: "Mysz LOGITECH G502 Hero"
+        date: "01.01.2023",
+        description: "Mysz LOGITECH G502 Hero"
       }
     ]
   };
   
-  // widget WykresSprzedazy
-  
+  // widget SalesChart
   export const chartData = [
     {
-      day: "Poniedziałek",
-      obrót: 3200,
-      liczba_sztuk: 25
+      day: "Monday",
+      turnover: 3200,
+      how_many: 25
     },
     {
-      day: "Wtorek",
-      obrót: 5500,
-      liczba_sztuk: 50
+      day: "Tuesday",
+      turnover: 5500,
+      how_many: 50
     },
     {
-      day: "Środa",
-      obrót: 3600,
-      liczba_sztuk: 70
+      day: "Wednesday",
+      turnover: 3600,
+      how_many: 70
     },
     {
-      day: "Czwartek",
-      obrót: 4300,
-      liczba_sztuk: 45
+      day: "Thursday",
+      turnover: 4300,
+      how_many: 45
     },
     {
-      day: "Piątek",
-      obrót: 4600,
-      liczba_sztuk: 111
+      day: "Friday",
+      turnover: 4600,
+      how_many: 111
     },
     {
-      day: "Sobota",
-      obrót: 6000,
-      liczba_sztuk: 90
+      day: "Saturday",
+      turnover: 6000,
+      how_many: 90
     },
     {
-      day: "Niedziela",
-      obrót: 3800,
-      liczba_sztuk: 75
+      day: "Sunday",
+      turnover: 3800,
+      how_many: 75
     }
   ];
   

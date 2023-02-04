@@ -14,7 +14,7 @@ import { chartData } from "../mocks/mockedData";
 const lineChartData = chartData;
 function SalesLineChart(props) {
   const sortedDataType =
-    props.sortType === "turnover" ? "obrót" : "liczba_sztuk";
+    props.sortType === "turnover" ? "turnover" : "how_many";
   return (
     <div className="chartCard">
       <ResponsiveContainer width="100%" aspect={2}>
@@ -23,10 +23,10 @@ function SalesLineChart(props) {
           margin={{ left: 50, right: 50, top: 100, bottom: 100 }}
         >
           <CartesianGrid strokeDasharray="2 2" />
-          <Tooltip contentStyle={{ backgroundColor: "lightgray" }} />
+          <Tooltip contentStyle={{ backgroundColor: "#3E7E9F" }} />
           <Line
             dataKey={sortedDataType}
-            stroke="#B2A8B8"
+            stroke="#FEE9FF"
             activeDot={{ r: 10 }}
             type="monotone"
           />

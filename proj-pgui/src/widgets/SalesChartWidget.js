@@ -50,8 +50,8 @@ function ChartTypeButton(props) {
         value={props.buttonValue}
         className={
           props.isChosen === "yes"
-            ? "buttonClicked roundedButton"
-            : "buttonNotClicked roundedButton"
+            ? "buttonClicked roundedButton largeFontSize"
+            : "buttonNotClicked roundedButton largeFontSize"
         }
       >
         <TextAny text={props.name} />
