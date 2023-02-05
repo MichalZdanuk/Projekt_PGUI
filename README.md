@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Projekt_ProjektowanieGraficznychInterfejsówUżytkownika
+### Mini-projekt zrealizowany w ramach przedmiotu "Projektowanie Graficznych Interfejsów Użytkownika", semestr V na Politechnice Warszawskiej. Celem było napisanie prostej aplikacji SPA - **"Panelu Sprzedawcy"**, będącej częścią portalu zakupowego, na której użytkownik może zobaczyć podsumowanie swojej sprzedaży.
+***
+### Wykorzystane technologie:
+Aplikacja została napisana w technologii front-endowej React. Stan przechowywany był w komponentach funkcyjnych przy pomocy hooków(głównie useState, useContext, useLocation).
+Przechowywanie stanu globalnego takiego jak wybrany: język, motyw kolorystyczny zrealizowane zostały za pomocą *ReactContext*.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wykorzystane dodatkowe biblioteki/zależności:
+* **react-router-dom**,
+* **recharts**,
+* **react-grid-layout**,
+* **styled-components**
 
-## Available Scripts
+### Założenie dotyczące projektu:
+Główne założenia panelu:
+* dostęp do "Panelu Sprzedawcy" poprzez logowanie
+* zawiera widgety: "Zamówienia", "Jakość Sprzedaży", "Opinie Kupujących", "Ranking Ofert", "Wykres Sprzedaży", "Porady Sprzedażowe"
+* dostępność w 2 językach: a) angielski b) polski
+* dostępność 2 motywów kolorystycznych: a) ciemny b) jasny
 
-In the project directory, you can run:
+Szczegółowy opis wymagań dotyczących projektu znajduje się w pliku: *"ZarysProjektu"*
 
-### `npm start`
+Pierwotnie projekt napisay był na platformie "codesandbox.io". Kod projektu przed refaktryzacją: "https://codesandbox.io/s/pgui2022z-proj-mm-mz-oykr1t". Zdecydowałem się kompletnie zreformować projekt, ponieważ kod był "nieelegancki" tzn. pełny niepotrzebnej redundancji kodu, nieprzemyślanie napisane funkcje, "sztywny kod" totalnie nieresponsywny oraz wykorzystanie starego sposobu programowania w React - z pomocą komponentów klasowych. Poza tym projekt był bardzo niespójny (tzn. mieszane nazewnictwo zmiennych polski/angielskie, łamanie konwencji raz camelCase, a potem oddzielanie słów _). Te niedoskonałości zmotywowały mnie do napisania projektu niejako od nowa, bazując na pierwotnym kodzie. Poza kodem zmieniłem także koncepcję. Poprzednio panel opierał sięna warunkowo pojawiających się widgetach w formie "sticky notes". Zmieniłem to na jedną stronę, gdzie mamy od razu karteczki-miniaturki z ważnym podumowaniem. Po kliknięciu w karteczkę jesteśmy przekierowani do strony ze szczegółowym widgetem. Z czego jestem szczególnie zadowolony to to, że udało się zaimplementować responsywaność przez możliwość dowolnego przesuwania względem siebie karteczek.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Koncepcją graficzną do wykonania strony głównej z karteczkami z podsumowaniem widgetów zainspirowałem się z fajnie wykonanego projektu z lat ubiegłych przez innych studentów Politechniki Warszawskiej. Jednakże cały kod projektu został napisany samodzielnie. Linki do projektu, z którego wykorzystałem koncept graficzny kartek:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* link do repozytorium: https://github.com/k-piekarczyk/pgui-dashboard/tree/main/
+* link do sandboxa: https://icy8j.csb.app/dashboard
