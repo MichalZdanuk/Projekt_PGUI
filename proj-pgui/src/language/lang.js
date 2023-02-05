@@ -45,6 +45,14 @@ const pl = {
   NOTPAID: "NIEOPŁACONE",
   REFUNDS: "ZWROTY",
   currentlyProcessedOrders: "Obecnie realizowane zamówienia",
+  turnover: "OBRÓT",
+  how_many: "LICZBA SZTUK",
+  MOSTTURNOVER: "OBRÓT",
+  MOSTAMOUNT: "L.SZTUK",
+  LEASTVIEWS: "L.WYŚW.",
+  LEASTAMOUNT: "L.SZTUK",
+  name: "NAZWA",
+  image: "ZDJĘCIE"
 };
 
 const en = {
@@ -91,6 +99,14 @@ const en = {
   NOTPAID: "NOT PAID",
   REFUNDS: "REFUNDS",
   currentlyProcessedOrders: "Currently processed orders",
+  turnover: "TURNOVER",
+  how_many: "AMOUNT",
+  MOSTTURNOVER: "TURNOVER",
+  MOSTAMOUNT: "AMOUNT",
+  LEASTVIEWS: "VIEWS",
+  LEASTAMOUNT: "AMOUNT",
+  name: "NAME",
+  image: "IMAGE"
 };
 
 export const LangContext = React.createContext({

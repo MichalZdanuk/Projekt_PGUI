@@ -109,8 +109,8 @@ function OrderTypeButton(props) {
       <button
         className={
           props.isChosen === "yes"
-            ? "buttonClicked roundedButton largeFontSize"
-            : "buttonNotClicked roundedButton largeFontSize"
+            ? "buttonClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
+            : "buttonNotClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
         }
         onClick={props.handleOrderTypeClick}
         value={props.type}
@@ -150,9 +150,9 @@ function ListOfOrders(props) {
 function Order(props) {
   return (
     <div className="orderBox">
-      <p className="orderID plainFontSize">ID: {props.id}</p>
-      <p className="orderText">{props.description}</p>
-      <p className="orderDate">
+      <p className="orderID adjustedTextLargeWidgetThumbnail">ID: {props.id}</p>
+      <p className="orderText adjustedTextWidgetThumbnail">{props.description}</p>
+      <p className="orderDate adjustedTextWidgetThumbnail">
         <i>{props.date}</i>
       </p>
       <br />

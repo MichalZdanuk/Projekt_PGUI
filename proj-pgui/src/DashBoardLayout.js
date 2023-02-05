@@ -29,9 +29,10 @@ export function DashBoardLayout() {
           }
         }}
         style={{ marginLeft: "1%"}}
-      >
+      ><span className="adjustedTextLargeWidgetThumbnail">
         <TextAny text="return" />
         {location.pathname === "/dashboard" ? <TextAny text="homePage" /> : <TextAny text="dashboard" />}
+      </span>
       </emph>
       </div>
 

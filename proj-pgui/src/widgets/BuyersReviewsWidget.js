@@ -52,8 +52,8 @@ function OpinionTypeButton(props) {
       <button
         className={
           props.isChosen === "yes"
-            ? "buttonClicked roundedButton largeFontSize"
-            : "buttonNotClicked roundedButton largeFontSize"
+            ? "buttonClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
+            : "buttonNotClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
         }
         onClick={props.handleOpinionClick}
         value={props.type}
@@ -104,22 +104,22 @@ function ListOfOpinions(props) {
 function Opinion(props) {
   return (
     <div className="opinionBox">
-      <p className="opinionUsername plainFontSize">
-        <emph>{props.username}</emph>
+      <p className="opinionUsername">
+        <emph className="adjustedTextLargeWidgetThumbnail">{props.username}</emph>
         <emph style={{ float: "right", marginRight: "5%" }}>
           {props.opinionType === "positive" ? (
-            <span className="positive">
+            <span className="positive adjustedTextLargeWidgetThumbnail">
               <TextAny text="positiveOpinion" />
             </span>
           ) : (
-            <span className="negative">
+            <span className="negative adjustedTextLargeWidgetThumbnail">
               <TextAny text="negativeOpinion" />
             </span>
           )}
         </emph>
       </p>
-      <p className="opinionText">{props.text}</p>
-      <p className="opinionDate">
+      <p className="opinionText adjustedTextWidgetThumbnail">{props.text}</p>
+      <p className="opinionDate adjustedTextWidgetThumbnail">
         <i>{props.date}</i>
       </p>
       <br />

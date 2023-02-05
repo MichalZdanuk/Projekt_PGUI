@@ -97,51 +97,51 @@ export const customerReviews = [
   export const sellerOffers = [
     {
       id: 1,
-      productName: "Kapelusz",
+      productName: "hat",
       numberOfItems: 60,
       numberOfViews: 42039,
       turnover: 3000,
-      picturePath: "/public/icons/hat.png"
+      picturePath: "./src/icons/hat.png"
     },
     {
       id: 2,
-      productName: "Okulary",
+      productName: "eyeglasses",
       numberOfItems: 100,
       numberOfViews: 53247,
       turnover: 4000,
-      picturePath: "/icons/eyeglasses.png"
+      picturePath: "./src/icons/eyeglasses.png"
     },
     {
       id: 3,
-      productName: "Słuchawki",
+      productName: "headphone",
       numberOfItems: 200,
       numberOfViews: 62948,
       turnover: 80000,
-      picturePath: "/icons/headphone.png"
+      picturePath: "./src/icons/headphone.png"
     },
     {
       id: 4,
-      productName: "Koszulka",
+      productName: "t-shirt",
       numberOfItems: 500,
       numberOfViews: 89382,
       turnover: 40000,
-      picturePath: "/icons/t-shirt.png"
+      picturePath: "./src/icons/t-shirt.png"
     },
     {
       id: 5,
-      productName: "Klawiatura",
+      productName: "keyboard",
       numberOfItems: 150,
       numberOfViews: 73204,
       turnover: 20000,
-      picturePath: "/icons/keyboard.png"
+      picturePath: "./src/icons/keyboard.png"
     },
     {
       id: 6,
-      productName: "Myszka",
+      productName: "mouse",
       numberOfItems: 50,
       numberOfViews: 73204,
       turnover: 20000,
-      picturePath: "/icons/mouse.png"
+      picturePath: "./src/icons/mouse.png"
     }
   ];
   

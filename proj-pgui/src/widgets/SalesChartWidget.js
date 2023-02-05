@@ -6,9 +6,15 @@ import { RequiredAuth } from "../auth";
 
 function SalesChartWidget() {
   const [chartType, setChartType] = useState("barChart");
+  const [dataType, setDataType] = useState("turnover");
+
   const changeChartType = (e) => {
     e.preventDefault();
-    setChartType(e.target.value);
+    if (e.target.value === "barChart" || e.target.value === "lineChart") {
+      setChartType(e.target.value);
+    } else if (e.target.value === "turnover" || e.target.value === "how_many") {
+      setDataType(e.target.value);
+    }
   };
   return (
     <RequiredAuth>
@@ -17,32 +23,50 @@ function SalesChartWidget() {
           <TextAny text="salesChart" />
         </p>
         <hr className="widgetTitle" />
+        {/* dataType buttons */}
         <div className="centeredElement">
-          <ChartTypeButton
+          <ChartButton
+            name="turnover"
+            handleClick={changeChartType}
+            buttonValue="turnover"
+            isChosen={dataType === "turnover" ? "yes" : "no"}
+          />
+          <ChartButton
+            name="how_many"
+            handleClick={changeChartType}
+            buttonValue="how_many"
+            isChosen={dataType === "how_many" ? "yes" : "no"}
+          />
+        </div>
+        <br />
+
+        {/* chartType buttons */}
+        <div className="centeredElement">
+          <ChartButton
             name="lineChart"
             handleClick={changeChartType}
             buttonValue="lineChart"
             isChosen={chartType === "lineChart" ? "yes" : "no"}
           />
-          <ChartTypeButton
+          <ChartButton
             name="barChart"
             handleClick={changeChartType}
             buttonValue="barChart"
             isChosen={chartType === "barChart" ? "yes" : "no"}
           />
         </div>
-        {/* <p>wybrany: {chartType}</p> */}
+
         {chartType === "barChart" ? (
-          <SalesBarChart sortType="turnover" />
+          <SalesBarChart sortType={dataType} />
         ) : (
-          <SalesLineChart sortType="turnover" />
+          <SalesLineChart sortType={dataType} />
         )}
       </div>
     </RequiredAuth>
   );
 }
 
-function ChartTypeButton(props) {
+function ChartButton(props) {
   return (
     <>
       <button
@@ -50,8 +74,8 @@ function ChartTypeButton(props) {
         value={props.buttonValue}
         className={
           props.isChosen === "yes"
-            ? "buttonClicked roundedButton largeFontSize"
-            : "buttonNotClicked roundedButton largeFontSize"
+            ? "buttonClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
+            : "buttonNotClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
         }
       >
         <TextAny text={props.name} />

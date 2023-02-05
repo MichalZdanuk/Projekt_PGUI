@@ -27,7 +27,7 @@ function LoginPage() {
         <h1 style={{ fontWeight: "bold", paddingTop: "100px", textAlign: "center" }}><TextAny text="pleaseLoginIn" /></h1>
         <br />
         <input
-          className="loginInput"
+          className="loginInput centeredElement"
           onChange={(e) => {
             setUsername(e.target.value);
           }}
