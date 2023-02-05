@@ -132,7 +132,11 @@ function OrderTypeButton(props) {
 
 function ListOfOrders(props) {
   if (props.ordersList.length < 1) {
-    return <p>No orders yet</p>;
+    return (
+      <h3>
+        <TextAny text="noOrders" />
+      </h3>
+    );
   }
   let ordersListCpy = [];
   if (props.type === "NOTPAID") {

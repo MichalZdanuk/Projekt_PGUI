@@ -68,7 +68,11 @@ function QualityAspectsTable(props) {
 function Quality(props) {
   const maxPoints = qualityOfSales.listOfGrades.length;
   if (props.points === 0) {
-    return <h2>Not collected enough data to calculate quality!!!</h2>;
+    return (
+      <h3>
+        <TextAny text="noQualityData" />
+      </h3>
+    );
   }
   return (
     <h2>
@@ -86,7 +90,11 @@ function WorstAspects() {
 
   const listOfWorst = sortedListOfAspects.slice(0, 3);
   if (listOfWorst.length < 3) {
-    return <h2>Not enough data (less than three aspects rated)</h2>;
+    return (
+      <h3>
+        <TextAny text="noQualityData" />
+      </h3>
+    );
   }
   const list = listOfWorst.map((aspect) => aspect.aspectName);
 

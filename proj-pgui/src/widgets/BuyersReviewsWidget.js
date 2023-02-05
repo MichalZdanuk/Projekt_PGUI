@@ -76,7 +76,11 @@ function OpinionTypeButton(props) {
 
 function ListOfOpinions(props) {
   if (props.opinionsList.length < 1) {
-    return <p>No opinions yet!!!</p>;
+    return (
+      <h3>
+        <TextAny text="noOpinion" />
+      </h3>
+    );
   }
   let opinionsListCpy = null;
   if (props.type === "ALL") {
@@ -94,7 +98,11 @@ function ListOfOpinions(props) {
   }
 
   if (opinionsListCpy.length === 0) {
-    return <p>Not collected opinions yet</p>;
+    return (
+      <h3>
+        <TextAny text="noOpinion" />
+      </h3>
+    );
   }
 
   const opinionsList = opinionsListCpy.map((opinion) => (

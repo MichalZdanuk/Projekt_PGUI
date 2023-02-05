@@ -52,7 +52,11 @@ const pl = {
   LEASTVIEWS: "L.WYŚW.",
   LEASTAMOUNT: "L.SZTUK",
   name: "NAZWA",
-  image: "ZDJĘCIE"
+  image: "ZDJĘCIE",
+  noOrders: "Brak zamówień",
+  noOpinion: "Brak opinii",
+  noQualityData: "Niewystarczająco danych, by policzyć jakość!!!",
+  noOffers: "Brak ofert od sprzedawcy",
 };
 
 const en = {
@@ -106,7 +110,11 @@ const en = {
   LEASTVIEWS: "VIEWS",
   LEASTAMOUNT: "AMOUNT",
   name: "NAME",
-  image: "IMAGE"
+  image: "IMAGE",
+  noOrders: "No orders yet",
+  noOpinion: "No opinions yet",
+  noQualityData: "Not collected enough data to calculate quality!!!",
+  noOffers: "No offers from seller yet",
 };
 
 export const LangContext = React.createContext({

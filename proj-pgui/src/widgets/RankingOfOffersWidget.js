@@ -91,7 +91,11 @@ function TableOfOffers(props) {
   const { theme } = useContext(ThemeContext);
 
   if (props.offersList.length < 1) {
-    return <p>No offers from seller yet</p>;
+    return (
+      <h3>
+        <TextAny text="noOffers" />
+      </h3>
+    );
   }
 
   let processedData = [...props.offersList];
