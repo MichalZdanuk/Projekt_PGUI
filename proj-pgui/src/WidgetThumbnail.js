@@ -2,13 +2,17 @@ import startsRating from "./icons/startsRating.png";
 import chartIcon from "./icons/chartIcon.png";
 
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import { TextAny } from "./language/langTexts";
 
+import ThemeContext from "./theme/themeContext";
+
 function WidgetThumbnail(props) {
+  const { theme } = useContext(ThemeContext);
   const navigate = useNavigate();
   return (
     <div
-      className="widget_thumbnail"
+      className={"widget_thumbnail " + theme + "Main"}
       onMouseUp={(e) => {
         e.stopPropagation();
         navigate(props.location);
@@ -36,7 +40,13 @@ function WidgetThumbnail(props) {
               <br />
             </p>
             <div className="centeredElement">
-              <button className="roundedButton buttonClicked largeFontSize">
+              <button
+                className={
+                  "roundedButton largeFontSize buttonClicked " +
+                  theme +
+                  "ButtonClicked"
+                }
+              >
                 <TextAny text="orders" />
               </button>
             </div>
@@ -69,7 +79,13 @@ function WidgetThumbnail(props) {
           </div>
 
           <div className="centeredElement">
-            <button className="roundedButton buttonClicked largeFontSize">
+            <button
+              className={
+                "roundedButton largeFontSize buttonClicked " +
+                theme +
+                "ButtonClicked"
+              }
+            >
               <TextAny text="checkDetails" />
             </button>
           </div>
@@ -152,13 +168,25 @@ function WidgetThumbnail(props) {
           </div>
 
           <div className="centeredElement adjustedTextWidgetThumbnail">
-            <button className="buttonClicked roundedButton">
+            <button
+              className={
+                "roundedButton buttonClicked " + theme + "ButtonClicked"
+              }
+            >
               <TextAny text="lastWeek" />
             </button>
-            <button className="buttonClicked roundedButton">
+            <button
+              className={
+                "roundedButton buttonClicked " + theme + "ButtonClicked"
+              }
+            >
               <TextAny text="lastMonth" />
             </button>
-            <button className="buttonClicked roundedButton">
+            <button
+              className={
+                "roundedButton buttonClicked " + theme + "ButtonClicked"
+              }
+            >
               <TextAny text="lastYear" />
             </button>
           </div>

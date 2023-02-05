@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import { customerReviews } from "../mocks/mockedData";
 import { TextAny } from "../language/langTexts";
 import { RequiredAuth } from "../auth";
 
+import ThemeContext from "../theme/themeContext";
+
 const receivedCustomerReviews = customerReviews;
 function BuyersReviewsWidget() {
   let [opinionType, setOpinionType] = useState("ALL");
+  const { theme } = useContext(ThemeContext);
 
   const handleOpinionClick = (e) => {
     e.preventDefault();
@@ -14,7 +17,7 @@ function BuyersReviewsWidget() {
 
   return (
     <RequiredAuth>
-      <div className="widgetCard widgetCardBackground">
+      <div className={"widgetCard " + theme + "Main"}>
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="buyersReviews" />
         </p>
@@ -47,13 +50,19 @@ function BuyersReviewsWidget() {
 }
 
 function OpinionTypeButton(props) {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
       <button
         className={
           props.isChosen === "yes"
-            ? "buttonClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
-            : "buttonNotClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
+            ? "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonClicked " +
+              theme +
+              "ButtonClicked"
+            : "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonNotClicked " +
+              theme +
+              "ButtonNotClicked"
         }
         onClick={props.handleOpinionClick}
         value={props.type}
@@ -102,10 +111,14 @@ function ListOfOpinions(props) {
 }
 
 function Opinion(props) {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="opinionBox">
+    <div className={"opinionBox " + theme + "Opinion"}>
       <p className="opinionUsername">
-        <emph className="adjustedTextLargeWidgetThumbnail">{props.username}</emph>
+        <emph className="adjustedTextLargeWidgetThumbnail">
+          {props.username}
+        </emph>
         <emph style={{ float: "right", marginRight: "5%" }}>
           {props.opinionType === "positive" ? (
             <span className="positive adjustedTextLargeWidgetThumbnail">

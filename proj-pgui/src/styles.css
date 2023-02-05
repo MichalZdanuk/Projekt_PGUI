@@ -21,9 +21,7 @@ body {
 }
 
 /* buttons */
-.languageButon {
-  background-color: #744c95;
-  color: #000000;
+.languageButton {
   font-weight: bold;
 }
 .roundedButton {
@@ -33,26 +31,10 @@ body {
   text-align: center;
 }
 .buttonClicked {
-  background-color: #411d62;
-  color: #fee9ff;
   font-weight: bold;
   border-color: #b2a8b8;
 }
 .buttonNotClicked {
-  background-color: #e3b4ff;
-  color: #000000;
-  font-weight: bold;
-  border-color: #b2a8b8;
-}
-.buttonClicked {
-  background-color: #411d62;
-  color: #fee9ff;
-  font-weight: bold;
-  border-color: #b2a8b8;
-}
-.buttonNotClicked {
-  background-color: #e3b4ff;
-  color: #000000;
   font-weight: bold;
   border-color: #b2a8b8;
 }
@@ -71,9 +53,16 @@ body {
 
 .widget_thumbnail {
   border: solid 4px #b2a8b8;
-  background: #744c95;
   border-radius: 20px;
   height: 300px;
+}
+
+.darkMain {
+  background-color: #744c95;
+}
+
+.lightMain {
+  background-color: #b2a8b8;
 }
 
 .widget_thumbnail_content {
@@ -107,10 +96,6 @@ body {
   border-color: #b2a8b8;
 }
 
-.widgetCardBackground {
-  background: #744c95;
-}
-
 hr.widgetTitle {
   margin-top: -60px;
   margin-left: 6%;
@@ -130,14 +115,21 @@ hr.widgetTitle {
   border-style: groove;
   border-radius: 15px;
   border-color: #b2a8b8;
-  background-color: #744c95;
+  /* background-color: #744c95; */
 }
-.loginInput {
-  width: 500px;
-  height: 50px;
+.lightInput {
+  color: #000000;
+  background-color: #fee9ff;
+  border: solid 3px #000000;
+}
+.darkInput {
   color: #fee9ff;
   background-color: #411d62;
   border: solid 3px #b2a8b8;
+}
+.loginInput {
+  /* width: 500px; */
+  height: 50px;
   border-radius: 20px;
   margin-left: 20%;
   margin-right: 20%;
@@ -179,6 +171,12 @@ div.worstAspects {
 }
 
 /* widget buyersReviews */
+.lightOpinion {
+  background-color: #fee9ff;
+}
+.darkOpinion {
+  background-color: #e3b4ff;
+}
 .opinionBox {
   border-radius: 15px;
   border: solid 3px;
@@ -186,7 +184,6 @@ div.worstAspects {
   margin-right: 5%;
   margin-bottom: 2%;
   margin-top: 2%;
-  background-color: #e3b4ff;
 }
 .opinionUsername {
   margin-left: 3%;
@@ -215,6 +212,12 @@ table.center {
   margin-right: auto;
 }
 
+.lightOrder {
+  background-color: #fee9ff;
+}
+.darkOrder {
+  background-color: #e3b4ff;
+}
 .orderBox {
   border-radius: 15px;
   border: solid 3px;
@@ -222,7 +225,6 @@ table.center {
   margin-right: 5%;
   margin-bottom: 2%;
   margin-top: 2%;
-  background-color: #e3b4ff;
 }
 .orderDate {
   float: right;
@@ -249,4 +251,34 @@ table.center {
 .numberOfOrders {
   float: right;
   margin-right: 10%;
+}
+
+.lightButtonClicked {
+  background-color: #fef7ff;
+  color: #000000;
+}
+
+.darkButtonClicked {
+  background-color: #411d62;
+  color: #fee9ff;
+}
+
+.lightButtonNotClicked {
+  background-color: #7d7483;
+  color: #000000;
+}
+
+.darkButtonNotClicked {
+  background-color: #e3b4ff;
+  color: #411d62;
+}
+
+.lightChangeButton {
+  background-color: #7d7483;
+  color: #000000;
+}
+
+.darkChangeButton {
+  background-color: #e3b4ff;
+  color: #411d62;
 }

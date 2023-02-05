@@ -1,15 +1,17 @@
-import React from "react";
+import { useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ctxAuth, authenticate } from "./auth";
 import { TextAny } from "./language/langTexts";
+import ThemeContext from "./theme/themeContext";
 
 function LoginPage() {
-  const [username, setUsername] = React.useState("");
-  let { zaloguj } = React.useContext(ctxAuth);
+  const [username, setUsername] = useState("");
+  let { zaloguj } = useContext(ctxAuth);
   let { state } = useLocation();
-  const [pathTo] = React.useState(state?.pathTo);
-  const [msg, setMsg] = React.useState(state?.msg);
+  const [pathTo] = useState(state?.pathTo);
+  const [msg, setMsg] = useState(state?.msg);
   const navigate = useNavigate();
+  const { theme } = useContext(ThemeContext);
 
   const cmdLogin = (e) => {
     e.preventDefault();
@@ -21,23 +23,38 @@ function LoginPage() {
     }
   };
   return (
-    <div className="loginPanel">
+    <div className={"loginPanel " + theme + "Main"}>
       {msg ? <div style={{ marginBottom: "1em" }}>{msg}</div> : ""}
       <form onSubmit={cmdLogin}>
-        <h1 style={{ fontWeight: "bold", paddingTop: "100px", textAlign: "center" }}><TextAny text="pleaseLoginIn" /></h1>
-        <br />
-        <input
-          className="loginInput centeredElement"
-          onChange={(e) => {
-            setUsername(e.target.value);
+        <h1
+          style={{
+            fontWeight: "bold",
+            paddingTop: "100px",
+            textAlign: "center",
           }}
-          value={username}
-          type="text"
-        />
+        >
+          <TextAny text="pleaseLoginIn" />
+        </h1>
+        <br />
+        <div className="centeredElement">
+          <input
+            className={"loginInput " + theme + "Input"}
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            value={username}
+            type="text"
+          />
+        </div>
         <br />
         <br />
         <div className="centeredElement">
-        <button className="buttonClicked roundedButton largeFontSize" onClick={cmdLogin}><TextAny text="logIn" /></button>
+          <button
+            className="buttonClicked roundedButton largeFontSize"
+            onClick={cmdLogin}
+          >
+            <TextAny text="logIn" />
+          </button>
         </div>
         <br />
         <br />

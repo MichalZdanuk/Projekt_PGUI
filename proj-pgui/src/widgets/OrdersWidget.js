@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { RequiredAuth } from "../auth";
 import { receivedOrders } from "../mocks/mockedData";
 import { TextAny } from "../language/langTexts";
+
+import ThemeContext from "../theme/themeContext";
 
 const receivedCustomerOrders = receivedOrders.listOfOrders;
 function OrdersWidget() {
   let [orderType, setOrderType] = useState("NONE");
   let [orderTypeChosen, setOrderTypeChosen] = useState("NO");
+  const { theme } = useContext(ThemeContext);
 
   const handleOrderTypeClick = (e) => {
     e.preventDefault();
@@ -39,7 +42,7 @@ function OrdersWidget() {
 
   return (
     <RequiredAuth>
-      <div className="widgetCard widgetCardBackground">
+      <div className={"widgetCard " + theme + "Main"}>
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="orders" />
         </p>
@@ -104,13 +107,18 @@ function OrdersTable(props) {
 }
 
 function OrderTypeButton(props) {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
       <button
         className={
           props.isChosen === "yes"
-            ? "buttonClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
-            : "buttonNotClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
+            ? "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonClicked " +
+              theme +
+              "ButtonClicked"
+            : "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonNotClicked " +
+              theme +
+              "ButtonNotClicked"
         }
         onClick={props.handleOrderTypeClick}
         value={props.type}
@@ -148,10 +156,14 @@ function ListOfOrders(props) {
 }
 
 function Order(props) {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="orderBox">
+    <div className={"orderBox " + theme + "Order"}>
       <p className="orderID adjustedTextLargeWidgetThumbnail">ID: {props.id}</p>
-      <p className="orderText adjustedTextWidgetThumbnail">{props.description}</p>
+      <p className="orderText adjustedTextWidgetThumbnail">
+        {props.description}
+      </p>
       <p className="orderDate adjustedTextWidgetThumbnail">
         <i>{props.date}</i>
       </p>

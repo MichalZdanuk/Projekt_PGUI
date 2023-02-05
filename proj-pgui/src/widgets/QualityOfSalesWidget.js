@@ -1,11 +1,14 @@
 import { receivedQualityOfSales } from "../mocks/mockedData";
 import { TextAny } from "../language/langTexts";
 import { RequiredAuth } from "../auth";
-import "../styles.css";
+import { useContext } from "react";
+
+import ThemeContext from "../theme/themeContext";
 
 const qualityOfSales = receivedQualityOfSales;
 function QualityOfSalesWidget() {
   let receivedPoints = 0;
+  const { theme } = useContext(ThemeContext);
 
   const calculatePoints = () => {
     const listLength = qualityOfSales.listOfGrades.length;
@@ -23,9 +26,9 @@ function QualityOfSalesWidget() {
 
   return (
     <RequiredAuth>
-      <div className="widgetCard widgetCardBackground">
+      <div className={"widgetCard " + theme + "Main"}>
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
-          <TextAny text="orders" />
+          <TextAny text="qualityOfSales" />
         </p>
         <hr className="widgetTitle" />
         <div style={{ marginLeft: "5%", marginRight: "5%", marginTop: "2%" }}>
@@ -41,6 +44,8 @@ function QualityOfSalesWidget() {
 }
 
 function QualityAspectsTable(props) {
+  const { theme } = useContext(ThemeContext);
+
   const listOfAspectsNames = props.listOfGrades.map((aspect) => (
     <th>{aspect.aspectName}</th>
   ));
@@ -48,7 +53,7 @@ function QualityAspectsTable(props) {
     <th>{aspect.receivedPoints}/10</th>
   ));
   return (
-    <table className="center" border="2px">
+    <table className={"center " + theme + "Opinion"} border="2px">
       <col width="170px" />
       <col width="170px" />
       <col width="170px" />

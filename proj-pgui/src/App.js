@@ -14,9 +14,12 @@ import SalesChartWidget from "./widgets/SalesChartWidget";
 
 import { ctxAuth } from "./auth";
 import React from "react";
+import { useState } from "react";
 import "./styles.css";
 
 import { LangContextProvider } from "./language/lang";
+import ThemeContext from "./theme/themeContext";
+
 
 import {
   Route,
@@ -61,12 +64,16 @@ function App() {
     ])
   );
 
+  const [theme, setTheme] = useState("dark");
+
   return (
+    <ThemeContext.Provider value={{theme, setTheme}}>
     <LangContextProvider>
       <ctxAuth.Provider value={{ authState, zaloguj, wyloguj }}>
         <RouterProvider router={router}></RouterProvider>
       </ctxAuth.Provider>
     </LangContextProvider>
+    </ThemeContext.Provider>
   );
 }
 

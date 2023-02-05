@@ -1,12 +1,15 @@
 import SalesLineChart from "../charts/SalesLineChart";
 import SalesBarChart from "../charts/SalesBarChart";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { TextAny } from "../language/langTexts";
 import { RequiredAuth } from "../auth";
 
+import ThemeContext from "../theme/themeContext";
+
 function SalesChartWidget() {
-  const [chartType, setChartType] = useState("barChart");
+  const [chartType, setChartType] = useState("lineChart");
   const [dataType, setDataType] = useState("turnover");
+  const { theme } = useContext(ThemeContext);
 
   const changeChartType = (e) => {
     e.preventDefault();
@@ -18,7 +21,7 @@ function SalesChartWidget() {
   };
   return (
     <RequiredAuth>
-      <div className="widgetCard">
+      <div className={"widgetCard " + theme + "Main"}>
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="salesChart" />
         </p>
@@ -67,6 +70,8 @@ function SalesChartWidget() {
 }
 
 function ChartButton(props) {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
       <button
@@ -74,8 +79,12 @@ function ChartButton(props) {
         value={props.buttonValue}
         className={
           props.isChosen === "yes"
-            ? "buttonClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
-            : "buttonNotClicked roundedButton adjustedTextLargeWidgetThumbnailTitle"
+            ? "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonClicked " +
+              theme +
+              "ButtonClicked"
+            : "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonNotClicked " +
+              theme +
+              "ButtonNotClicked"
         }
       >
         <TextAny text={props.name} />

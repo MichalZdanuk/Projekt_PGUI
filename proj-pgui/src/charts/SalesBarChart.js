@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ResponsiveContainer,
   XAxis,
@@ -22,7 +21,7 @@ function SalesBarChart(props) {
           margin={{ left: 50, right: 50, top: 100, bottom: 100 }}
         >
           <CartesianGrid strokeDasharray="2 2" />
-          <Tooltip contentStyle={{ backgroundColor: "#3E7E9F" }}/>
+          <Tooltip contentStyle={{ backgroundColor: "#3E7E9F" }} />
           <Bar dataKey={sortedDataType} fill="#FEE9FF" />
           <XAxis dataKey="day" interval="preserveStartEnd" />
           <YAxis />
