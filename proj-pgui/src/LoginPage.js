@@ -25,8 +25,8 @@ function LoginPage() {
   };
   return (
     <>
-    <div className={"loginPanel " + theme + "Main"}>
-      {msg ? <div style={{ marginBottom: "1em" }}>{msg}</div> : ""}
+    <div className={"loginPanel centeredElement " + theme + "Main"}>
+      {msg ? <div style={{ marginBottom: "1em", color: "red", fontWeight: "bold" }}>{msg}</div> : ""}
       <div className="centeredElement leftAndRightMargins">
             <img style={{maxWidth: "100%", marginBottom: "-8%"}} src={logoMZ} alt="logo" height="300"/>
           </div>

@@ -40,6 +40,7 @@ const pl = {
   incorrectUsername: "Niepoprawna nazwa użytkownika",
   pleaseLoginIn: "Zaloguj się, aby zobaczyć DashBoard Sprzedawcy",
   logIn: "Zaloguj",
+  logOut: "Wyloguj",
   mustBeLogged: "Musisz być zalogowany, aby uzyskać dostęp do tej strony",
   NOTSENT: "NIEWYSŁANE",
   NOTPAID: "NIEOPŁACONE",
@@ -57,6 +58,18 @@ const pl = {
   noOpinion: "Brak opinii",
   noQualityData: "Niewystarczająco danych, by policzyć jakość!!!",
   noOffers: "Brak ofert od sprzedawcy",
+  homePageDescription1:
+    "Przed sobą masz Panel Sprzedawcy - aplikcja SPA. Projekt zrealizowany przeze mnie w ramach przedmiotu: ",
+  pgui: "Projektowanie graficznych interfejsów użytkownika",
+  homePageDescription2: " na ",
+  university: "Politechnice Warszawskiej",
+  department: "kierunek: Informatyka Stosowana, wydział: Elektryczny",
+  homePageDescription3:
+    "Aplikacja napisana w 100% w technologii: React. Wykorzystane zależności: react-router-dom, react-grid-layout, recharts, styled-components",
+  linkToRepo: "Link do repozytorium z projektem: ",
+  homePageDescription4:
+    "Aby przejść do Panelu Sprzedawcy naciśnij te 'kartke'.",
+  logged: "Zalogowany: "
 };
 
 const en = {
@@ -98,6 +111,7 @@ const en = {
   incorrectUsername: "Incorrect username",
   pleaseLoginIn: "Log in to see Seller's DashBoard",
   logIn: "Log in",
+  logOut: "Log out",
   mustBeLogged: "You must be logged to get access to this page",
   NOTSENT: "NOT SENT",
   NOTPAID: "NOT PAID",
@@ -115,6 +129,17 @@ const en = {
   noOpinion: "No opinions yet",
   noQualityData: "Not collected enough data to calculate quality!!!",
   noOffers: "No offers from seller yet",
+  homePageDescription1:
+    "In front of you see Seller's DashBoard- Single Page Aplication. Project was realized by myself on course: ",
+  pgui: "Graphical User Interfaces Design",
+  homePageDescription2: " on ",
+  university: "Warsaw University of Technology",
+  department: "field: Applied Computer Science, department: Electrical",
+  homePageDescription3:
+    "Aplication has been written 100% in technology: React. Used dependencies: react-router-dom, react-grid-layout, recharts, styled-components",
+  linkToRepo: "Link to repo with project: ",
+  homePageDescription4: "To enter DashBoard click this 'card'.",
+  logged: "Logged as: "
 };
 
 export const LangContext = React.createContext({

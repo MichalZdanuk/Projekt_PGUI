@@ -1,4 +1,3 @@
-import "./App.css";
 import DashBoard from "./DashBoard";
 import { DashBoardLayout } from "./DashBoardLayout";
 import LoginPage from "./LoginPage";
