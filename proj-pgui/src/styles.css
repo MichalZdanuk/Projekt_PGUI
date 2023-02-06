@@ -20,32 +20,12 @@ body {
   margin-top: 1%;
 }
 
-/* buttons */
-.languageButton {
-  font-weight: bold;
-}
-.roundedButton {
-  border-radius: 10px;
-}
-.buttonCentered {
-  text-align: center;
-}
-.buttonClicked {
-  font-weight: bold;
-  border-color: #b2a8b8;
-}
-.buttonNotClicked {
-  font-weight: bold;
-  border-color: #b2a8b8;
-}
-
 .right {
   position: absolute;
   top: 2%;
   right: 2%;
   padding: 10px;
 }
-
 .rightIcon {
   float: right;
   margin: 0px 15px 15px 0px;
@@ -60,7 +40,6 @@ body {
 .darkMain {
   background-color: #744c95;
 }
-
 .lightMain {
   background-color: #8d77a0;
 }
@@ -107,99 +86,8 @@ hr.widgetTitle {
   text-align: center;
 }
 
-/* loginPage */
-.loginPanel {
-  margin-top: 2%;
-  margin-left: 20%;
-  margin-right: 20%;
-  border-style: groove;
-  border-radius: 15px;
-  border-color: #b2a8b8;
-  /* background-color: #744c95; */
-}
-.lightInput {
-  color: #000000;
-  background-color: #c6bbcf;
-  border: solid 3px #000000;
-}
-.darkInput {
-  color: #fee9ff;
-  background-color: #411d62;
-  border: solid 3px #b2a8b8;
-}
-.loginInput {
-  /* width: 500px; */
-  height: 50px;
-  border-radius: 20px;
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: center;
-  font-size: 40px;
-}
-
-h4.worstAspects {
-  color: red;
-  font-weight: bold;
-}
-
-div.worstAspects {
-  color: red;
-  border-radius: 15px;
-  border: solid 3px;
-  width: 200px;
-}
-
 .centeredElement {
   text-align: center;
-}
-
-.largeFontSize {
-  font-size: 25px;
-}
-
-.plainFontSize {
-  font-size: 20px;
-}
-
-.positive {
-  color: green;
-  font-weight: bold;
-}
-.negative {
-  color: red;
-  font-weight: bold;
-}
-
-/* widget buyersReviews */
-.lightOpinion {
-  background-color: #c6bbcf;
-}
-.darkOpinion {
-  background-color: #e3b4ff;
-}
-.opinionBox {
-  border-radius: 15px;
-  border: solid 3px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 2%;
-  margin-top: 2%;
-}
-.opinionUsername {
-  margin-left: 3%;
-  font-weight: bold;
-  color: #411d62;
-}
-.opinionDate {
-  float: right;
-  margin-right: 5%;
-  font-weight: bold;
-  color: #411d62;
-}
-.opinionText {
-  margin-left: 3%;
-  margin-right: 3%;
-  color: #000000;
 }
 
 .leftAndRightMargins {
@@ -212,103 +100,9 @@ table.center {
   margin-right: auto;
 }
 
-.lightOrder {
-  background-color: #c6bbcf;
-}
-.darkOrder {
-  background-color: #e3b4ff;
-}
-.orderBox {
-  border-radius: 15px;
-  border: solid 3px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 2%;
-  margin-top: 2%;
-}
-.orderDate {
-  float: right;
-  margin-right: 5%;
-  font-weight: bold;
-  color: #411d62;
-}
-.orderID {
-  margin-left: 3%;
-  font-weight: bold;
-  color: #411d62;
-}
-.orderText {
-  margin-left: 3%;
-  margin-right: 3%;
-  color: #000000;
-}
-.lightOrderTableColumn {
-  background-color: #c6bbcf;
-  color: #27113a;
-  text-align: center;
-}
-
-.darkOrderTableColumn {
-  background-color: #411d62;
-  color: #fee9ff;
-  text-align: center;
-}
-
 .numberOfOrders {
   float: right;
   margin-right: 10%;
-}
-
-.lightButtonClicked {
-  background-color: #fef7ff;
-  color: #000000;
-}
-
-.darkButtonClicked {
-  background-color: #411d62;
-  color: #fee9ff;
-}
-
-.lightButtonNotClicked {
-  background-color: #7d7483;
-  color: #000000;
-}
-
-.darkButtonNotClicked {
-  background-color: #e3b4ff;
-  color: #411d62;
-}
-
-.lightChangeButton {
-  background-color: #7d7483;
-  color: #000000;
-}
-
-.darkChangeButton {
-  background-color: #e3b4ff;
-  color: #411d62;
-}
-
-/* advice widget */
-.lightAdvice {
-  background-color: #c6bbcf;
-}
-.darkAdvice {
-  background-color: #e3b4ff;
-}
-.adviceBox {
-  border-radius: 15px;
-  border: solid 3px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 2%;
-  margin-top: 2%;
-}
-
-.adviceText {
-  margin-left: 3%;
-  margin-right: 3%;
-  color: #000000;
 }
 
 .lightTable {

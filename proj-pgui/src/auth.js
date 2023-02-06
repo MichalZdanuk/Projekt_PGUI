@@ -19,7 +19,7 @@ export function RequiredAuth(props) {
         to="/"
         state={{
           msg: "You must be logged to get access to this page",
-          pathTo: location.pathname
+          pathTo: location.pathname,
         }}
       />
     );

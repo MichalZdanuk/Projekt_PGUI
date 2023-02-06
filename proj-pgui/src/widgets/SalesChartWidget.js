@@ -43,7 +43,6 @@ function SalesChartWidget() {
         </div>
         <br />
 
-        {/* chartType buttons */}
         <div className="centeredElement">
           <ChartButton
             name="lineChart"

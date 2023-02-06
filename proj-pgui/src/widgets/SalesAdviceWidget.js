@@ -22,7 +22,7 @@ function SalesAdviceWidget() {
   );
 }
 
-function ListOfAdvice(props){
+function ListOfAdvice(props) {
   if (props.adviceList.length < 1) {
     return (
       <h3>
@@ -33,20 +33,19 @@ function ListOfAdvice(props){
   let adviceListCpy = [...props.adviceList];
 
   const adviceList = adviceListCpy.map((advice) => (
-    <Advice
-      key={advice.id}
-      text={advice.text}
-    />
+    <Advice key={advice.id} text={advice.text} />
   ));
 
   return <div>{adviceList}</div>;
 }
 
-function Advice(props){
+function Advice(props) {
   const { theme } = useContext(ThemeContext);
   return (
     <div className={"adviceBox " + theme + "Advice"}>
-      <p className="adviceText adjustedTextLargeWidgetThumbnail">{props.text}</p>
+      <p className="adviceText adjustedTextLargeWidgetThumbnail">
+        {props.text}
+      </p>
       <br />
     </div>
   );

@@ -7,7 +7,7 @@ import {
   YAxis,
   CartesianGrid,
   Legend,
-  Tooltip
+  Tooltip,
 } from "recharts";
 import { chartData } from "../mocks/mockedData";
 

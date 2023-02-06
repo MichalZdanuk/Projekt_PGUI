@@ -14,7 +14,7 @@ const pl = {
   receivedCategory: "Przyznana kategoria: ",
   worstAspects: "Najgorsze Aspekty",
   welcome: "Witaj, ",
-  checkDetails: "SPRAWDŹ SZCZEGÓŁY",
+  checkDetails: "SZCZEGÓŁY",
   lineChart: "LINIOWY",
   barChart: "SŁUPKOWY",
   return: "Powrót do: ",
@@ -69,7 +69,8 @@ const pl = {
   linkToRepo: "Link do repozytorium z projektem: ",
   homePageDescription4:
     "Aby przejść do Panelu Sprzedawcy naciśnij te 'kartke'.",
-  logged: "Zalogowany: "
+  logged: "Zalogowany: ",
+  decentCategory: "PRZYZWOITY",
 };
 
 const en = {
@@ -139,7 +140,8 @@ const en = {
     "Aplication has been written 100% in technology: React. Used dependencies: react-router-dom, react-grid-layout, recharts, styled-components",
   linkToRepo: "Link to repo with project: ",
   homePageDescription4: "To enter DashBoard click this 'card'.",
-  logged: "Logged as: "
+  logged: "Logged as: ",
+  decentCategory: "DECENT",
 };
 
 export const LangContext = React.createContext({

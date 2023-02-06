@@ -1,0 +1,42 @@
+/* buttons */
+.languageButton {
+  font-weight: bold;
+}
+.roundedButton {
+  border-radius: 10px;
+}
+.buttonCentered {
+  text-align: center;
+}
+.buttonClicked {
+  font-weight: bold;
+  border-color: #b2a8b8;
+}
+.buttonNotClicked {
+  font-weight: bold;
+  border-color: #b2a8b8;
+}
+.lightButtonClicked {
+  background-color: #fef7ff;
+  color: #000000;
+}
+.darkButtonClicked {
+  background-color: #411d62;
+  color: #fee9ff;
+}
+.lightButtonNotClicked {
+  background-color: #7d7483;
+  color: #000000;
+}
+.darkButtonNotClicked {
+  background-color: #e3b4ff;
+  color: #411d62;
+}
+.lightChangeButton {
+  background-color: #7d7483;
+  color: #000000;
+}
+.darkChangeButton {
+  background-color: #e3b4ff;
+  color: #411d62;
+}

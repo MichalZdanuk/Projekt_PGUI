@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import { useContext } from "react";
 import { LangContext } from "./lang";
 
 import ThemeContext from "../theme/themeContext";
@@ -13,11 +13,19 @@ export function LangSwitcher(props) {
   return (
     <>
       {ctxLang.lang === "pl" ? (
-        <button className={"roundedButton languageButton " + theme + "ChangeButton"} onClick={handleLangChange} value="en">
+        <button
+          className={"roundedButton languageButton " + theme + "ChangeButton"}
+          onClick={handleLangChange}
+          value="en"
+        >
           POLSKI
         </button>
       ) : (
-        <button className={"roundedButton languageButton " + theme + "ChangeButton"} onClick={handleLangChange} value="pl">
+        <button
+          className={"roundedButton languageButton " + theme + "ChangeButton"}
+          onClick={handleLangChange}
+          value="pl"
+        >
           ENGLISH
         </button>
       )}

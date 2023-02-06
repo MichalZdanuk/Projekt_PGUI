@@ -42,7 +42,7 @@ function WidgetThumbnail(props) {
             <div className="centeredElement">
               <button
                 className={
-                  "roundedButton largeFontSize buttonClicked " +
+                  "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonClicked " +
                   theme +
                   "ButtonClicked"
                 }
@@ -74,14 +74,17 @@ function WidgetThumbnail(props) {
           </div>
 
           <div className="centeredElement adjustedTextLargeWidgetThumbnail">
-            <h4>{<TextAny text="receivedCategory" />}DECENT</h4>
+            <h4>
+              {<TextAny text="receivedCategory" />}
+              <TextAny text="decentCategory" />
+            </h4>
             <h4>{<TextAny text="qualityRate" />}37/50</h4>
           </div>
 
           <div className="centeredElement">
             <button
               className={
-                "roundedButton largeFontSize buttonClicked " +
+                "roundedButton adjustedTextLargeWidgetThumbnailTitle buttonClicked " +
                 theme +
                 "ButtonClicked"
               }
@@ -164,7 +167,12 @@ function WidgetThumbnail(props) {
             <TextAny text="analyzeData" />
           </p>
           <div className="centeredElement leftAndRightMargins">
-            <img style={{maxWidth: "100%"}} src={chartIcon} alt="chart" height="100" />
+            <img
+              style={{ maxWidth: "100%" }}
+              src={chartIcon}
+              alt="chart"
+              height="100"
+            />
           </div>
 
           <div className="centeredElement adjustedTextWidgetThumbnail">

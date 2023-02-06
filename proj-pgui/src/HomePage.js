@@ -10,14 +10,14 @@ function HomePage() {
 
   const navigate = useNavigate();
   const handleClick = () => {
-    window.location.replace('https://github.com/MichalZdanuk/Projekt_PGUI');
+    window.location.replace("https://github.com/MichalZdanuk/Projekt_PGUI");
   };
   return (
     <div>
       <div style={{ marginBottom: "0.5em" }}>
-
         <div style={{ float: "right" }}>
-          <TextAny text="logged" /> {authState.zalogowany ? authState.zalogowany : "nikt..."}
+          <TextAny text="logged" />{" "}
+          {authState.zalogowany ? authState.zalogowany : "nikt..."}
           {authState.zalogowany ? (
             <a
               href="#aa"
@@ -30,24 +30,30 @@ function HomePage() {
               (<TextAny text="logOut" />)
             </a>
           ) : (
-            <Link to="/">(<TextAny text="logIn" />)</Link>
+            <Link to="/">
+              (<TextAny text="logIn" />)
+            </Link>
           )}
         </div>
       </div>
       <br />
       <br />
 
-      <div onClick={(e) => {
-                e.preventDefault();
-                navigate("/dashboard");
-              }} className={"widgetCard " + theme + "Main"}>
+      <div
+        onClick={(e) => {
+          e.preventDefault();
+          navigate("/dashboard");
+        }}
+        className={"widgetCard " + theme + "Main"}
+      >
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="homePage" />
         </p>
         <hr className="widgetTitle" />
         <div className="centeredElement">
           <p className="adjustedTextLargeWidgetThumbnail">
-            <TextAny text="homePageDescription1" /><br/>
+            <TextAny text="homePageDescription1" />
+            <br />
             <span style={{ fontWeight: "bold" }}>
               <TextAny text="pgui" />
             </span>
@@ -58,24 +64,24 @@ function HomePage() {
             <span style={{ fontWeight: "bold" }}>
               <TextAny text="department" />
             </span>
-            <br/>
+            <br />
             <TextAny text="homePageDescription3" />
-            
-            <br/>
+            <br />
             <TextAny text="homePageDescription4" />
-            
           </p>
         </div>
       </div>
       <div onClick={handleClick} className={"widgetCard " + theme + "Main"}>
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
-         <TextAny text="linkToRepo" />
+          <TextAny text="linkToRepo" />
         </p>
         <hr className="widgetTitle" />
         <div className="centeredElement adjustedTextLargeWidgetThumbnail">
-          <span style={{fontWeight: "bold"}}>https://github.com/MichalZdanuk/Projekt_PGUI</span>
+          <span style={{ fontWeight: "bold" }}>
+            https://github.com/MichalZdanuk/Projekt_PGUI
+          </span>
         </div>
-        </div>
+      </div>
     </div>
   );
 }

@@ -19,7 +19,6 @@ import "./styles.css";
 import { LangContextProvider } from "./language/lang";
 import ThemeContext from "./theme/themeContext";
 
-
 import {
   Route,
   createBrowserRouter,
@@ -66,12 +65,12 @@ function App() {
   const [theme, setTheme] = useState("dark");
 
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
-    <LangContextProvider>
-      <ctxAuth.Provider value={{ authState, zaloguj, wyloguj }}>
-        <RouterProvider router={router}></RouterProvider>
-      </ctxAuth.Provider>
-    </LangContextProvider>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <LangContextProvider>
+        <ctxAuth.Provider value={{ authState, zaloguj, wyloguj }}>
+          <RouterProvider router={router}></RouterProvider>
+        </ctxAuth.Provider>
+      </LangContextProvider>
     </ThemeContext.Provider>
   );
 }
