@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { ctxAuth, authenticate } from "./auth";
 import { TextAny } from "./language/langTexts";
 import ThemeContext from "./theme/themeContext";
+import logoMZ from "./icons/logoMZ.png"
 
 function LoginPage() {
   const [username, setUsername] = useState("");
@@ -23,8 +24,12 @@ function LoginPage() {
     }
   };
   return (
+    <>
     <div className={"loginPanel " + theme + "Main"}>
       {msg ? <div style={{ marginBottom: "1em" }}>{msg}</div> : ""}
+      <div className="centeredElement leftAndRightMargins">
+            <img style={{maxWidth: "100%", marginBottom: "-8%"}} src={logoMZ} alt="logo" height="300"/>
+          </div>
       <form onSubmit={cmdLogin}>
         <h1
           style={{
@@ -35,7 +40,6 @@ function LoginPage() {
         >
           <TextAny text="pleaseLoginIn" />
         </h1>
-        <br />
         <div className="centeredElement">
           <input
             className={"loginInput " + theme + "Input"}
@@ -47,7 +51,6 @@ function LoginPage() {
           />
         </div>
         <br />
-        <br />
         <div className="centeredElement">
           <button
             className="buttonClicked roundedButton largeFontSize"
@@ -57,9 +60,10 @@ function LoginPage() {
           </button>
         </div>
         <br />
-        <br />
       </form>
     </div>
+    <br/>
+    </>
   );
 }
 

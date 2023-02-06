@@ -62,7 +62,7 @@ body {
 }
 
 .lightMain {
-  background-color: #b2a8b8;
+  background-color: #8d77a0;
 }
 
 .widget_thumbnail_content {
@@ -119,7 +119,7 @@ hr.widgetTitle {
 }
 .lightInput {
   color: #000000;
-  background-color: #fee9ff;
+  background-color: #c6bbcf;
   border: solid 3px #000000;
 }
 .darkInput {
@@ -172,7 +172,7 @@ div.worstAspects {
 
 /* widget buyersReviews */
 .lightOpinion {
-  background-color: #fee9ff;
+  background-color: #c6bbcf;
 }
 .darkOpinion {
   background-color: #e3b4ff;
@@ -213,7 +213,7 @@ table.center {
 }
 
 .lightOrder {
-  background-color: #fee9ff;
+  background-color: #c6bbcf;
 }
 .darkOrder {
   background-color: #e3b4ff;
@@ -242,7 +242,13 @@ table.center {
   margin-right: 3%;
   color: #000000;
 }
-.orderTableColumn {
+.lightOrderTableColumn {
+  background-color: #c6bbcf;
+  color: #27113a;
+  text-align: center;
+}
+
+.darkOrderTableColumn {
   background-color: #411d62;
   color: #fee9ff;
   text-align: center;
@@ -285,7 +291,7 @@ table.center {
 
 /* advice widget */
 .lightAdvice {
-  background-color: #fee9ff;
+  background-color: #c6bbcf;
 }
 .darkAdvice {
   background-color: #e3b4ff;
@@ -303,4 +309,12 @@ table.center {
   margin-left: 3%;
   margin-right: 3%;
   color: #000000;
+}
+
+.lightTable {
+  background-color: #c6bbcf;
+}
+.darkTable {
+  background-color: #27113b;
+  color: #fee9ff;
 }

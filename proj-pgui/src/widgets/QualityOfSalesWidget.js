@@ -53,7 +53,7 @@ function QualityAspectsTable(props) {
     <th>{aspect.receivedPoints}/10</th>
   ));
   return (
-    <table className={"center " + theme + "Opinion"} border="2px">
+    <table className={"center " + theme + "Table"} border="2px">
       <col width="170px" />
       <col width="170px" />
       <col width="170px" />

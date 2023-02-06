@@ -129,7 +129,7 @@ function TableOfOffers(props) {
   ));
 
   return (
-    <table className={"center " + theme + "Opinion"} border="2px">
+    <table className={"center " + theme + "Table"} border="2px">
       <col width="250px" />
       <col width="250px" />
       <col width="250px" />

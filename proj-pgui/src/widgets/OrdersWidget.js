@@ -77,25 +77,27 @@ function OrdersWidget() {
 }
 
 function OrdersTable(props) {
+  const { theme } = useContext(ThemeContext);
+
   return props.isChosen === "NO" ? (
     <table className="center" border="2px">
       <col width="250px" />
       <col width="250px" />
       <col width="250px" />
       <tr>
-        <td className="orderTableColumn">
+        <td className={theme + "OrderTableColumn"}>
           {
             props.ordersList.filter((order) => order.orderType === "NOTPAID")
               .length
           }
         </td>
-        <td className="orderTableColumn">
+        <td className={theme + "OrderTableColumn"}>
           {
             props.ordersList.filter((order) => order.orderType === "NOTSENT")
               .length
           }
         </td>
-        <td className="orderTableColumn">
+        <td className={theme + "OrderTableColumn"}>
           {
             props.ordersList.filter((order) => order.orderType === "REFUNDS")
               .length

@@ -7,10 +7,10 @@ const ThemeSwitcher = () => {
     setTheme(theme === "dark" ? "light" : "dark");
     const bodyElt = document.querySelector("body");
     if(theme === "dark"){
-      bodyElt.style.backgroundColor = "#FFF6FF";
+      bodyElt.style.backgroundColor = "#c6bbcf";
       bodyElt.style.color = "#000000";
     } else if (theme === "light"){
-      bodyElt.style.backgroundColor = "#411d62";
+      bodyElt.style.backgroundColor = "#27113b";
       bodyElt.style.color = "#fee9ff";
     }
   };

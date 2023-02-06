@@ -164,7 +164,7 @@ function WidgetThumbnail(props) {
             <TextAny text="analyzeData" />
           </p>
           <div className="centeredElement leftAndRightMargins">
-            <img src={chartIcon} alt="chart" height="100" />
+            <img style={{maxWidth: "100%"}} src={chartIcon} alt="chart" height="100" />
           </div>
 
           <div className="centeredElement adjustedTextWidgetThumbnail">
