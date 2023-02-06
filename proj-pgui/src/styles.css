@@ -203,8 +203,8 @@ div.worstAspects {
 }
 
 .leftAndRightMargins {
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 table.center {
@@ -281,4 +281,26 @@ table.center {
 .darkChangeButton {
   background-color: #e3b4ff;
   color: #411d62;
+}
+
+/* advice widget */
+.lightAdvice {
+  background-color: #fee9ff;
+}
+.darkAdvice {
+  background-color: #e3b4ff;
+}
+.adviceBox {
+  border-radius: 15px;
+  border: solid 3px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.adviceText {
+  margin-left: 3%;
+  margin-right: 3%;
+  color: #000000;
 }
