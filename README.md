@@ -1,6 +1,17 @@
 # Projekt_ProjektowanieGraficznychInterfejsówUżytkownika
 ### Mini-projekt zrealizowany w ramach przedmiotu "Projektowanie Graficznych Interfejsów Użytkownika", semestr V na Politechnice Warszawskiej. Celem było napisanie prostej aplikacji SPA - **"Panelu Sprzedawcy"**, będącej częścią portalu zakupowego, na której użytkownik może zobaczyć podsumowanie swojej sprzedaży.
 ***
+### Instrukcja uruchomienia aplikacji:
+Wymagane zainstalowanie stabilnej wersji Node.js: https://nodejs.org/en/.
+Instrukcja.
+* sklonowanie repozytorium: **git clone 'https://github.com/MichalZdanuk/Projekt_PGUI.git'**
+* przejście do katalogu projektu: **cd proj-pgui**
+* zainicjalizowanie aplikacji: **npm init**
+* zainstalowanie zależności: **npm install react-router, recharts, react-grid-layout, styled-components**
+* uruchomienie aplikacji: **npm start**
+
+Po wykonaniu instrukcji aplikacja powinna otworzyć się w przeglądarce na localhost z portem 3000
+
 ### Wykorzystane technologie:
 Aplikacja została napisana w technologii front-endowej React. Stan przechowywany był w komponentach funkcyjnych przy pomocy hooków(głównie useState, useContext, useLocation).
 Przechowywanie stanu globalnego takiego jak wybrany: język, motyw kolorystyczny zrealizowane zostały za pomocą *ReactContext*.
