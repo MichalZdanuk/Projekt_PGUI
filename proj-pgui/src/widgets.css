@@ -12,6 +12,11 @@
   margin-right: 5%;
   margin-bottom: 2%;
   margin-top: 2%;
+  cursor: pointer;
+}
+.opinionBox:hover {
+  transition: transform 0.4s;
+  transform: scale(1.05);
 }
 .opinionUsername {
   margin-left: 3%;
@@ -52,6 +57,11 @@
   margin-right: 5%;
   margin-bottom: 2%;
   margin-top: 2%;
+  cursor: pointer;
+}
+.orderBox:hover {
+  transition: transform 0.4s;
+  transform: scale(1.05);
 }
 .orderDate {
   float: right;
@@ -94,6 +104,11 @@
   margin-right: 5%;
   margin-bottom: 2%;
   margin-top: 2%;
+  cursor: pointer;
+}
+.adviceBox:hover {
+  transition: transform 0.4s;
+  transform: scale(1.05);
 }
 .adviceText {
   margin-left: 3%;

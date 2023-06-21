@@ -1,6 +1,12 @@
 /* buttons */
 .languageButton {
+  font-size: 1.1vw;
   font-weight: bold;
+  cursor: pointer;
+}
+.languageButton:hover {
+  transition: transform 0.2s;
+  transform: scale(1.05);
 }
 .roundedButton {
   border-radius: 10px;
@@ -10,11 +16,21 @@
 }
 .buttonClicked {
   font-weight: bold;
-  border-color: #b2a8b8;
+  cursor: pointer;
+}
+
+.buttonClicked:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
 .buttonNotClicked {
   font-weight: bold;
+  cursor: pointer;
   border-color: #b2a8b8;
+}
+.buttonNotClicked:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
 .lightButtonClicked {
   background-color: #fef7ff;

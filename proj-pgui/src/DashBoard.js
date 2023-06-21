@@ -33,6 +33,8 @@ const Grid = () => {
         cols={{ lg: 3, md: 3, sm: 2, xs: 2, xxs: 1 }}
         rowHeight={300}
         width={1000}
+        isDraggable={false} // Disable dragging
+        isResizable={false} // Disable resizing
       >
         <GridItemWrapper key="orders">
           <GridItemContent>

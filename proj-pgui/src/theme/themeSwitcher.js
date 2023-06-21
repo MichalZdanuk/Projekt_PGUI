@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import ThemeContext from "./themeContext";
+import { TextAny } from "../language/langTexts";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -22,7 +23,7 @@ const ThemeSwitcher = () => {
           onClick={switchTheme}
           value="light"
         >
-          DARK
+          <TextAny text="dark"/>
         </button>
       ) : (
         <button
@@ -30,7 +31,7 @@ const ThemeSwitcher = () => {
           onClick={switchTheme}
           value="dark"
         >
-          LIGHT
+          <TextAny text="light"/>
         </button>
       )}
     </>

@@ -15,16 +15,16 @@ export function DashBoardLayout() {
   return (
     <>
       <div className="right">
-        <emph>
+        <emph className="navbar_text">
           <TextAny text="language" /> {<LangSwitcher />}
         </emph>
         &ensp;&ensp;&ensp;
-        <emph>
+        <emph className="navbar_text">
           <TextAny text="theme" /> {<ThemeSwitcher />}
         </emph>
       </div>
       <br />
-      <div style={{ marginLeft: "5%" }}>
+      <div className="left-side">
         <img src={backIcon} alt="back" height="20" />
 
         <emph

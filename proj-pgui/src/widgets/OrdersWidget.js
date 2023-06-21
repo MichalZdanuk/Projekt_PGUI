@@ -166,9 +166,9 @@ function Order(props) {
 
   return (
     <div className={"orderBox " + theme + "Order"}>
-      <p className="orderID adjustedTextLargeWidgetThumbnail">ID: {props.id}</p>
+      <p className="orderID adjustedTextLargeWidgetThumbnail"><TextAny text="orderID"/> {props.id}</p>
       <p className="orderText adjustedTextWidgetThumbnail">
-        {props.description}
+        <TextAny text="products"/> {props.description}
       </p>
       <p className="orderDate adjustedTextWidgetThumbnail">
         <i>{props.date}</i>

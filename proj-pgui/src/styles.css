@@ -5,6 +5,10 @@ body {
   color: #fee9ff;
 }
 
+.navbar_text{
+  font-size: 1.5vw;
+}
+
 /* adjusted font sizes */
 .adjustedTextWidgetThumbnail {
   font-size: calc(10px + 0.25vw);
@@ -16,8 +20,8 @@ body {
   font-size: calc(25px + 0.25vw);
 }
 .adjustedTextLargeWidgetCardTitle {
-  font-size: calc(55px + 0.25vw);
-  margin-top: 1%;
+  font-size: 2.8vw;
+  margin-top: 2px;
 }
 
 .right {
@@ -35,6 +39,7 @@ body {
   border: solid 4px #b2a8b8;
   border-radius: 20px;
   height: 300px;
+  cursor: pointer;
 }
 
 .darkMain {
@@ -70,13 +75,24 @@ body {
   margin-right: 10%;
   border-style: groove;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 5px 5px #b2a8b8;
   border-color: #b2a8b8;
+  
+}
+
+.widgetCardHomePage{
+  cursor: pointer;
+  margin-bottom: 2vw;
+}
+
+.widgetCardHomePage:hover {
+  transition: transform 0.4s;
+  transform: scale(1.05);
 }
 
 hr.widgetTitle {
-  margin-top: -60px;
+  margin-top: -50px;
   margin-left: 6%;
   margin-right: 6%;
 }
@@ -111,4 +127,9 @@ table.center {
 .darkTable {
   background-color: #27113b;
   color: #fee9ff;
+}
+
+.left-side{
+  margin-left: 5%;
+  cursor: pointer;
 }

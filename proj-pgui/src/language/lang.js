@@ -71,6 +71,8 @@ const pl = {
     "Aby przejść do Panelu Sprzedawcy naciśnij te 'kartke'.",
   logged: "Zalogowany: ",
   decentCategory: "PRZYZWOITY",
+  products: "produkty:",
+  orderID: "ID ZAMÓWIENIA: "
 };
 
 const en = {
@@ -142,6 +144,8 @@ const en = {
   homePageDescription4: "To enter DashBoard click this 'card'.",
   logged: "Logged as: ",
   decentCategory: "DECENT",
+  products: "products:",
+  orderID: "ORDER ID: ",
 };
 
 export const LangContext = React.createContext({

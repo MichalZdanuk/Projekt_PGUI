@@ -44,7 +44,7 @@ function HomePage() {
           e.preventDefault();
           navigate("/dashboard");
         }}
-        className={"widgetCard " + theme + "Main"}
+        className={"widgetCard widgetCardHomePage " + theme + "Main"}
       >
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="homePage" />
@@ -71,7 +71,7 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div onClick={handleClick} className={"widgetCard " + theme + "Main"}>
+      <div onClick={handleClick} className={"widgetCard widgetCardHomePage " + theme + "Main"}>
         <p className="widgetTitle adjustedTextLargeWidgetCardTitle">
           <TextAny text="linkToRepo" />
         </p>
